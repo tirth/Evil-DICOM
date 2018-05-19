@@ -111,9 +111,8 @@ var numCtrPoints = selector.ROIContourSequence
                 .Select(s =&gt; s.ContourSequence_[1])
                 .Select(s =&gt; s.NumberOfContourPoints_[4]);
 Assert.AreEqual(numCtrPoints.Data, 186);
-
-![Object Illustration](../images/selection.png &quot;Selecting Deep Descension&quot;)
-</code></pre><h3 id="quick-manipulation">Quick Manipulation</h3>
+</code></pre><p><img src="../images/selection.png" alt="Object Illustration" title="Selecting Deep Descension"></p>
+<h3 id="quick-manipulation">Quick Manipulation</h3>
 <p>It is also very easy to quickly modify DICOM data (for anonymization for example).</p>
 <pre><code class="lang-csharp">var dcm = DICOMFileReader.Read(Resources.structure);
 var sel = new DICOMSelector(dcm);
