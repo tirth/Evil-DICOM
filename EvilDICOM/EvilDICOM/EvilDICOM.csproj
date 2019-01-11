@@ -1,15 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.0;net45;net461</TargetFrameworks>
-    <RootNamespace>Evil_DICOM</RootNamespace>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Rex Cardan, PhD</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon>evilEye.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>EvilDICOM</PackageId>
+    <Version>2.0.2.8</Version>
+    <Authors>Rex Cardan, Ph.D.</Authors>
     <Company>Red Ion LLC</Company>
-    <Description>The wickedest .NET DICOM library in the world.</Description>
-    <Copyright>Red Ion LLC © 2019</Copyright>
+    <Product>Evil DICOM</Product>
+    <Description>The wickedest C# DICOM libary in the world.</Description>
+    <Copyright>Rex Cardan, Ph.D.</Copyright>
     <PackageProjectUrl>http://rexcardan.github.io/Evil-DICOM/</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/rexcardan/Evil-DICOM/blob/master/X11.LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/rexcardan/Evil-DICOM</RepositoryUrl>
     <PackageTags>dicom, medical-physics, radiology, radiation-oncology</PackageTags>
     <Version>2.0.5.4</Version>
@@ -19,28 +21,16 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  <PropertyGroup>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Properties\AssemblyInfo.cs" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="packages.config" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
-  </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if $(ConfigurationName) == Release signtool sign /tr http://timestamp.comodoca.com /td sha256 /fd sha256 /a &quot;$(TargetDir)$(TargetFileName)&quot;" />
-  </Target>
+    <ItemGroup>
+        <None Include="redion_sn.pfx" />
+    </ItemGroup>
 
 </Project>
