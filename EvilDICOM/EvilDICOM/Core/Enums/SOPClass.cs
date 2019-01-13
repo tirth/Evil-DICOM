@@ -1,3 +1,5 @@
+// THIS CODE WAS GENERATED AUTOMATICALLY
+
 namespace EvilDICOM.Core.Enums
 {
     public enum SOPClass
