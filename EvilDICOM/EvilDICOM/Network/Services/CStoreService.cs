@@ -31,7 +31,7 @@ namespace EvilDICOM.Network.Services
             asc.LastActive = DateTime.Now;
             asc.IdleClock.Restart();
             var resp = new CStoreResponse(req, Status.SUCCESS);
-            var syntax = req.Data.FindFirst(TagHelper.SOP​Class​UID);
+            var syntax = req.Data.FindFirst(TagHelper.SOPClassUID);
             dms.RaiseDIMSERequestReceived(req, asc);
 
             if (syntax != null)
