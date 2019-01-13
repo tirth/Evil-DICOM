@@ -1,4 +1,11 @@
+// THIS CODE WAS GENERATED AUTOMATICALLY
+
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.Helpers
 {
