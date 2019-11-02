@@ -91,6 +91,62 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static OtherByteString RTVMetaInformationVersion(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("00020031"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier RTVCommunicationSOPClassUID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("00020032"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier RTVCommunicationSOPInstanceUID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("00020033"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString RTVSourceIdentifier(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("00020035"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString RTVFlowIdentifier(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("00020036"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedLong RTVFlowRTPSamplingRate(params UInt32[] data)
+        {
+            var element = (new UnsignedLong());
+            element.Tag = (new Tag("00020037"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RTVFlowActualFrameDuration(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("00020038"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static UniqueIdentifier PrivateInformationCreatorUID(params String[] data)
         {
             var element = (new UniqueIdentifier());
@@ -4315,6 +4371,846 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static DecimalString WhitePoint(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160001"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString PrimaryChromaticities(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160002"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText BatteryLevel(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("00160003"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString ExposureTimeInSeconds(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160004"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString FNumber(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160005"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString OECFRows(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("00160006"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString OECFColumns(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("00160007"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedCharacter OECFColumnNames(params String[] data)
+        {
+            var element = (new UnlimitedCharacter());
+            element.Tag = (new Tag("00160008"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString OECFValues(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160009"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString SpatialFrequencyResponseRows(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016000A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString SpatialFrequencyResponseColumns(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016000B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedCharacter SpatialFrequencyResponseColumnNames(params String[] data)
+        {
+            var element = (new UnlimitedCharacter());
+            element.Tag = (new Tag("0016000C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString SpatialFrequencyResponseValues(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("0016000D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString ColorFilterArrayPatternRows(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016000E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString ColorFilterArrayPatternColumns(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016000F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString ColorFilterArrayPatternValues(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160010"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort FlashFiringStatus(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160011"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort FlashReturnStatus(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160012"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort FlashMode(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160013"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort FlashFunctionPresent(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160014"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort FlashRedEyeMode(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160015"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort ExposureProgram(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160016"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText SpectralSensitivity(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("00160017"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString PhotographicSensitivity(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("00160018"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString SelfTimerMode(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("00160019"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort SensitivityType(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("0016001A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString StandardOutputSensitivity(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016001B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString RecommendedExposureIndex(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016001C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString ISOSpeed(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016001D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString ISOSpeedLatitudeyyy(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016001E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString ISOSpeedLatitudezzz(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016001F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText EXIFVersion(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("00160020"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString ShutterSpeedValue(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160021"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString ApertureValue(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160022"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString BrightnessValue(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160023"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString ExposureBiasValue(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160024"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString MaxApertureValue(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160025"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString SubjectDistance(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160026"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort MeteringMode(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160027"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort LightSource(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160028"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString FocalLength(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160029"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString SubjectArea(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016002A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString MakerNote(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("0016002B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Temperature(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160030"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Humidity(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160031"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Pressure(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160032"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString WaterDepth(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160033"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Acceleration(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160034"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString CameraElevationAngle(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160035"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString FlashEnergy(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160036"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString SubjectLocation(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("00160037"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString PhotographicExposureIndex(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160038"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort SensingMethod(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160039"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort FileSource(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("0016003A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort SceneType(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("0016003B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort CustomRendered(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160041"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort ExposureMode(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160042"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort WhiteBalance(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160043"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString DigitalZoomRatio(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160044"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString FocalLengthIn35mmFilm(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("00160045"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort SceneCaptureType(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160046"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort GainControl(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160047"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Contrast(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160048"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Saturation(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160049"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Sharpness(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("0016004A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString DeviceSettingDescription(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("0016004B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort SubjectDistanceRange(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("0016004C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText CameraOwnerName(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("0016004D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString LensSpecification(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("0016004E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText LensMake(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("0016004F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText LensModel(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("00160050"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText LensSerialNumber(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("00160051"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString InteroperabilityIndex(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00160061"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString InteroperabilityVersion(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("00160062"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString GPSVersionID(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("00160070"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSLatitudeRef(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00160071"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSLatitude(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160072"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSLongitudeRef(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00160073"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSLongitude(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160074"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort GPSAltitudeRef(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00160075"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSAltitude(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160076"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Element.DateTime GPSTimeStamp(params System.DateTime?[] data)
+        {
+            var element = (new Element.DateTime());
+            element.Tag = (new Tag("00160077"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText GPSSatellites(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("00160078"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSStatus(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00160079"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSMeasureMode(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("0016007A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSDOP(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("0016007B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSSpeedRef(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("0016007C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSSpeed(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("0016007D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSTrackRef(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("0016007E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSTrack(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("0016007F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSImgDirectionRef(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00160080"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSImgDirection(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160081"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText GPSMapDatum(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("00160082"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSDestLatitudeRef(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00160083"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSDestLatitude(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160084"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSDestLongitudeRef(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00160085"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSDestLongitude(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160086"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSDestBearingRef(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00160087"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSDestBearing(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00160088"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString GPSDestDistanceRef(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00160089"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString GPSDestDistance(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("0016008A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString GPSProcessingMethod(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("0016008B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString GPSAreaInformation(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("0016008C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Element.DateTime GPSDateStamp(params System.DateTime?[] data)
+        {
+            var element = (new Element.DateTime());
+            element.Tag = (new Tag("0016008D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString GPSDifferential(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("0016008E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static LongString ContrastBolusAgent(params String[] data)
         {
             var element = (new LongString());
@@ -4807,6 +5703,14 @@ namespace EvilDICOM.Core
         {
             var element = (new Sequence());
             element.Tag = (new Tag("0018100A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier ManufacturerDeviceClassUID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("0018100B"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -6143,6 +7047,78 @@ namespace EvilDICOM.Core
         {
             var element = (new UnsignedShort());
             element.Tag = (new Tag("00181624"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString OutlineShapeType(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00181630"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble OutlineLeftVerticalEdge(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("00181631"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble OutlineRightVerticalEdge(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("00181632"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble OutlineUpperHorizontalEdge(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("00181633"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble OutlineLowerHorizontalEdge(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("00181634"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble CenterOfCircularOutline(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("00181635"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble DiameterOfCircularOutline(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("00181636"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedLong NumberOfPolygonalVertices(params UInt32[] data)
+        {
+            var element = (new UnsignedLong());
+            element.Tag = (new Tag("00181637"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherFloatString VerticesOfThePolygonalOutline(params Byte[] data)
+        {
+            var element = (new OtherFloatString());
+            element.Tag = (new Tag("00181638"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -12555,6 +13531,62 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static Sequence SurgicallyInducedAstigmatismSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00221045"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString TypeOfOpticalCorrection(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00221046"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ToricIOLPowerSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00221047"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence PredictedToricErrorSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00221048"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString PreSelectedForImplantation(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00221049"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ToricIOLPowerForExactEmmetropiaSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("0022104A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ToricIOLPowerForExactTargetRefractionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("0022104B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static Sequence OphthalmicAxialLengthMeasurementsSequence(params DICOMObject[] data)
         {
             var element = (new Sequence());
@@ -12719,6 +13751,30 @@ namespace EvilDICOM.Core
         {
             var element = (new Sequence());
             element.Tag = (new Tag("00221128"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence CalculationCommentSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("0022112A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString CalculationCommentType(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("0022112B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongText CalculationComment(params String[] data)
+        {
+            var element = (new LongText());
+            element.Tag = (new Tag("0022112C"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -16307,6 +17363,22 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static UnlimitedText ReasonForVisit(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("00321066"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ReasonForVisitCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00321067"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static LongString RequestedContrastAgent(params String[] data)
         {
             var element = (new LongString());
@@ -16319,6 +17391,102 @@ namespace EvilDICOM.Core
         {
             var element = (new LongText());
             element.Tag = (new Tag("00324000"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence FlowIdentifierSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00340001"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString FlowIdentifier(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("00340002"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier FlowTransferSyntaxUID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("00340003"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedLong FlowRTPSamplingRate(params UInt32[] data)
+        {
+            var element = (new UnsignedLong());
+            element.Tag = (new Tag("00340004"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString SourceIdentifier(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("00340005"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString FrameOriginTimestamp(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("00340007"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString IncludesImagingSubject(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00340008"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence FrameUsefulnessGroupSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00340009"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RealTimeBulkDataFlowSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("0034000A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence CameraPositionGroupSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("0034000B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString IncludesInformation(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("0034000C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence TimeOfFrameGroupSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("0034000D"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -19459,6 +20627,14 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static UnsignedLong EncapsulatedDocumentLength(params UInt32[] data)
+        {
+            var element = (new UnsignedLong());
+            element.Tag = (new Tag("00420015"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static ShortText ProductPackageIdentifier(params String[] data)
         {
             var element = (new ShortText());
@@ -19967,6 +21143,78 @@ namespace EvilDICOM.Core
         {
             var element = (new FloatingPointDouble());
             element.Tag = (new Tag("00460106"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence CorneaMeasurementsSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00460110"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence SourceOfCorneaMeasurementDataCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00460111"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence SteepCornealAxisSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00460112"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence FlatCornealAxisSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00460113"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble CornealPower(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("00460114"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble CornealAxis(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("00460115"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence CorneaMeasurementMethodCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00460116"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointSingle RefractiveIndexOfCornea(params Single[] data)
+        {
+            var element = (new FloatingPointSingle());
+            element.Tag = (new Tag("00460117"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointSingle RefractiveIndexOfAqueousHumor(params Single[] data)
+        {
+            var element = (new FloatingPointSingle());
+            element.Tag = (new Tag("00460118"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -26883,6 +28131,22 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static Sequence NonconformingModifiedAttributesSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("04000551"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherByteString NonconformingDataElementValue(params Byte[] data)
+        {
+            var element = (new OtherByteString());
+            element.Tag = (new Tag("04000552"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static Sequence OriginalAttributesSequence(params DICOMObject[] data)
         {
             var element = (new Sequence());
@@ -28727,6 +29991,30 @@ namespace EvilDICOM.Core
         {
             var element = (new LongString());
             element.Tag = (new Tag("300600C8"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence PatientLocationCoordinatesSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300600C9"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence PatientLocationCoordinatesCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300600CA"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence PatientSupportPositionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300600CB"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -32691,6 +33979,1110 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static UnsignedShort RTControlPointIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0600"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort RadiationGenerationModeIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0601"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort ReferencedDefinedDeviceIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0602"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort RadiationDoseIdentificationIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0603"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort NumberOfRTControlPoints(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0604"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort ReferencedRadiationGenerationModeIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0605"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort TreatmentPositionIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0606"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort ReferencedDeviceIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0607"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString TreatmentPositionGroupLabel(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("300A0608"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier TreatmentPositionGroupUID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("300A0609"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence TreatmentPositionGroupSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A060A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort ReferencedTreatmentPositionIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A060B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort ReferencedRadiationDoseIdentificationIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A060C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RTAccessoryHolderWaterEquivalentThickness(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A060D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort ReferencedRTAccessoryHolderDeviceIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A060E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString RTAccessoryHolderSlotExistenceFlag(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A060F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTAccessoryHolderSlotSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0610"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString RTAccessoryHolderSlotID(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("300A0611"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RTAccessoryHolderSlotDistance(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0612"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RTAccessorySlotDistance(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0613"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTAccessoryHolderDefinitionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0614"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString RTAccessoryDeviceSlotID(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("300A0615"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTRadiationSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0616"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RadiationDoseSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0617"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RadiationDoseIdentificationSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0618"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString RadiationDoseIdentificationLabel(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("300A0619"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString ReferenceDoseType(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A061A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString PrimaryDoseValueIndicator(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A061B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence DoseValuesSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A061C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString DoseValuePurpose(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A061D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble ReferenceDosePointCoordinates(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A061E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RadiationDoseValuesParametersSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A061F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence MetersetToDoseMappingSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0620"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ExpectedInVivoMeasurementValuesSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0621"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort ExpectedInVivoMeasurementValueIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0622"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString RadiationDoseInVivoMeasurementLabel(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("300A0623"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationDoseCentralAxisDisplacement(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0624"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationDoseValue(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0625"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationDoseSourceToSkinDistance(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0626"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationDoseMeasurementPointCoordinates(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0627"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationDoseSourceToExternalContourDistance(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0628"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTToleranceSetSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0629"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString RTToleranceSetLabel(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("300A062A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence AttributeToleranceValuesSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A062B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble ToleranceValue(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A062C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence PatientSupportPositionToleranceSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A062D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble TreatmentTimeLimit(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A062E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence CArmPhotonElectronControlPointSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A062F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ReferencedRTRadiationSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0630"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ReferencedRTInstanceSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0631"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ReferencedRTPatientSetupSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0632"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble SourceToPatientSurfaceDistance(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0634"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence TreatmentMachineSpecialModeCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0635"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort IntendedNumberOfFractions(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0636"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString RTRadiationSetIntent(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A0637"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString RTRadiationPhysicalAndGeometricContentDetailFlag(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A0638"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString RTRecordFlag(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A0639"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence TreatmentDeviceIdentificationSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A063A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ReferencedRTPhysicianIntentSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A063B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble CumulativeMeterset(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A063C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble DeliveryRate(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A063D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence DeliveryRateUnitSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A063E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence TreatmentPositionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A063F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationSourceAxisDistance(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0640"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort NumberOfRTBeamLimitingDevices(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0641"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RTBeamLimitingDeviceProximalDistance(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0642"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RTBeamLimitingDeviceDistalDistance(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0643"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ParallelRTBeamDelimiterDeviceOrientationLabelCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0644"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble BeamModifierOrientationAngle(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0645"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence FixedRTBeamDelimiterDeviceSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0646"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ParallelRTBeamDelimiterDeviceSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0647"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort NumberOfParallelRTBeamDelimiters(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0648"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble ParallelRTBeamDelimiterBoundaries(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0649"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble ParallelRTBeamDelimiterPositions(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A064A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RTBeamLimitingDeviceOffset(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A064B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTBeamDelimiterGeometrySequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A064C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTBeamLimitingDeviceDefinitionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A064D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString ParallelRTBeamDelimiterOpeningMode(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A064E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString ParallelRTBeamDelimiterLeafMountingSide(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A064F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier PatientSetupUID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("300A0650"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence WedgeDefinitionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0651"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationBeamWedgeAngle(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0652"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationBeamWedgeThinEdgeDistance(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0653"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationBeamEffectiveWedgeAngle(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0654"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort NumberOfWedgePositions(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0655"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTBeamLimitingDeviceOpeningSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0656"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort NumberOfRTBeamLimitingDeviceOpenings(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0657"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RadiationDosimeterUnitSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0658"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTDeviceDistanceReferenceLocationCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0659"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RadiationDeviceConfigurationAndCommissioningKeySequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A065A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence PatientSupportPositionParameterSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A065B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString PatientSupportPositionSpecificationMethod(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A065C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence PatientSupportPositionDeviceParameterSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A065D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort DeviceOrderIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A065E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort PatientSupportPositionParameterOrderIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A065F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence PatientSupportPositionDeviceToleranceSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0660"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort PatientSupportPositionToleranceOrderIndex(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0661"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence CompensatorDefinitionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0662"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString CompensatorMapOrientation(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A0663"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherFloatString CompensatorProximalThicknessMap(params Byte[] data)
+        {
+            var element = (new OtherFloatString());
+            element.Tag = (new Tag("300A0664"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherFloatString CompensatorDistalThicknessMap(params Byte[] data)
+        {
+            var element = (new OtherFloatString());
+            element.Tag = (new Tag("300A0665"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble CompensatorBasePlaneOffset(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0666"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence CompensatorShapeFabricationCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0667"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence CompensatorShapeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0668"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationBeamCompensatorMillingToolDiameter(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0669"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence BlockDefinitionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A066A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static OtherFloatString BlockEdgeData(params Byte[] data)
+        {
+            var element = (new OtherFloatString());
+            element.Tag = (new Tag("300A066B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString BlockOrientation(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A066C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationBeamBlockThickness(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A066D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RadiationBeamBlockSlabThickness(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A066E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence BlockEdgeDataSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A066F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort NumberOfRTAccessoryHolders(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0670"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence GeneralAccessoryDefinitionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0671"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort NumberOfGeneralAccessories(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0672"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence BolusDefinitionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0673"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort NumberOfBoluses(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0674"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier EquipmentFrameOfReferenceUID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("300A0675"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortText EquipmentFrameOfReferenceDescription(params String[] data)
+        {
+            var element = (new ShortText());
+            element.Tag = (new Tag("300A0676"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence EquipmentReferencePointCoordinatesSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0677"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence EquipmentReferencePointCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0678"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RTBeamLimitingDeviceAngle(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0679"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble SourceRollAngle(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A067A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RadiationGenerationModeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A067B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortString RadiationGenerationModeLabel(params String[] data)
+        {
+            var element = (new ShortString());
+            element.Tag = (new Tag("300A067C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortText RadiationGenerationModeDescription(params String[] data)
+        {
+            var element = (new ShortText());
+            element.Tag = (new Tag("300A067D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RadiationGenerationModeMachineCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A067E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RadiationTypeCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A067F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString NominalEnergy(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("300A0680"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString MinimumNominalEnergy(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("300A0681"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString MaximumNominalEnergy(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("300A0682"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RadiationFluenceModifierCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0683"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence EnergyUnitCodeSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0684"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort NumberOfRadiationGenerationModes(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0685"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence PatientSupportDevicesSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0686"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort NumberOfPatientSupportDevices(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("300A0687"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble RTBeamModifierDefinitionDistance(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("300A0688"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence BeamAreaLimitSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A0689"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ReferencedRTPrescriptionSequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("300A068A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static Sequence ReferencedRTPlanSequence(params DICOMObject[] data)
         {
             var element = (new Sequence());
@@ -33027,7 +35419,7 @@ namespace EvilDICOM.Core
             return element;
         }
 
-        public static LongString EffectiveDoseMethodDescription(params String[] data)
+        public static LongString EffectiveDoseCalculationMethodDescription(params String[] data)
         {
             var element = (new LongString());
             element.Tag = (new Tag("30100005"));
@@ -33195,7 +35587,7 @@ namespace EvilDICOM.Core
             return element;
         }
 
-        public static LongString ManufacturersModelVersion(params String[] data)
+        public static LongString ManufacturerModelVersion(params String[] data)
         {
             var element = (new LongString());
             element.Tag = (new Tag("3010001A"));
@@ -35615,6 +38007,22 @@ namespace EvilDICOM.Core
         {
             var element = (new LongText());
             element.Tag = (new Tag("60xx4000"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Other64BitVeryLong ExtendedOffsetTable(params Byte[] data)
+        {
+            var element = (new Other64BitVeryLong());
+            element.Tag = (new Tag("7FE00001"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Other64BitVeryLong ExtendedOffsetTableLengths(params Byte[] data)
+        {
+            var element = (new Other64BitVeryLong());
+            element.Tag = (new Tag("7FE00002"));
             element.Data_ = (data?.ToList());
             return element;
         }

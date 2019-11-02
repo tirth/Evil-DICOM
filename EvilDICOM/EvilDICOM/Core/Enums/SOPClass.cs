@@ -136,6 +136,8 @@ namespace EvilDICOM.Core.Enums
         RTIonBeamsTreatmentRecordStorage,
         RTPhysicianIntentStorage,
         RTSegmentAnnotationStorage,
+        RTRadiationSetStorage,
+        C_ArmPhoton_ElectronRadiationStorage,
         RTBeamsDeliveryInstructionStorage,
         RTBrachyApplicationSetupDeliveryInstructionStorage,
         Unknown

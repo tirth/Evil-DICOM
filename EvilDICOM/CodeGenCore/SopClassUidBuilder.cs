@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
@@ -11,7 +12,7 @@ namespace EvilDICOM.CodeGenerator
 {
     public static class SopClassUidBuilder
     {
-        public static void BuildSopClassUids()
+        public static void BuildSopClassUids(string outputDir)
         {
             var sopFields = DicomDefinitionLoader.LoadCurrentSopClasses()
                 .Select(sopClass => G.FieldDeclaration(
@@ -22,10 +23,10 @@ namespace EvilDICOM.CodeGenerator
                     G.LiteralExpression(sopClass.Id)));
 
             CodeGenHelper.PublicPartialClassFull(typeof(SOPClassUID), sopFields)
-                .WriteOut("SOPClassUID.cs");
+                .WriteOut(Path.Combine(outputDir, "SOPClassUID.cs"));
         }
 
-        public static void BuildSopClassEnum()
+        public static void BuildSopClassEnum(string outputDir)
         {
             var sopEnumMembers = DicomDefinitionLoader.LoadCurrentSopClasses()
                 .Select(sopClass => G.EnumMember(sopClass.Keyword))
@@ -36,10 +37,10 @@ namespace EvilDICOM.CodeGenerator
                     DeclarationModifiers.None,
                     sopEnumMembers)
                 .AddNamespace(typeof(SOPClass).Namespace)
-                .WriteOut("SOPClass.cs");
+                .WriteOut(Path.Combine(outputDir, "SOPClass.cs"));
         }
 
-        public static void BuildSopClassDictionary()
+        public static void BuildSopClassDictionary(string outputDir)
         {
             var type = G.IdentifierName($"Dictionary<string, {nameof(SOPClass)}>");
 
@@ -72,7 +73,7 @@ namespace EvilDICOM.CodeGenerator
                     new[] { method })
                 .AddNamespace(typeof(SOPClassHelper).Namespace)
                 .AddImports()
-                .WriteOut("SOPClassDictionary.cs");
+                .WriteOut(Path.Combine(outputDir, "SOPClassDictionary.cs"));
         }
     }
 }

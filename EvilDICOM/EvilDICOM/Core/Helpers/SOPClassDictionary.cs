@@ -146,6 +146,8 @@ namespace EvilDICOM.Core.Helpers
             dict.Add(SOPClassUID.RTIonBeamsTreatmentRecordStorage, SOPClass.RTIonBeamsTreatmentRecordStorage);
             dict.Add(SOPClassUID.RTPhysicianIntentStorage, SOPClass.RTPhysicianIntentStorage);
             dict.Add(SOPClassUID.RTSegmentAnnotationStorage, SOPClass.RTSegmentAnnotationStorage);
+            dict.Add(SOPClassUID.RTRadiationSetStorage, SOPClass.RTRadiationSetStorage);
+            dict.Add(SOPClassUID.C_ArmPhoton_ElectronRadiationStorage, SOPClass.C_ArmPhoton_ElectronRadiationStorage);
             dict.Add(SOPClassUID.RTBeamsDeliveryInstructionStorage, SOPClass.RTBeamsDeliveryInstructionStorage);
             dict.Add(SOPClassUID.RTBrachyApplicationSetupDeliveryInstructionStorage, SOPClass.RTBrachyApplicationSetupDeliveryInstructionStorage);
             return dict;

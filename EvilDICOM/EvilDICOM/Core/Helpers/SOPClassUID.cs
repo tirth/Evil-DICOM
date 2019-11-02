@@ -143,6 +143,8 @@ namespace EvilDICOM.Core.Helpers
         public const String RTIonBeamsTreatmentRecordStorage = "1.2.840.10008.5.1.4.1.1.481.9";
         public const String RTPhysicianIntentStorage = "1.2.840.10008.5.1.4.1.1.481.10";
         public const String RTSegmentAnnotationStorage = "1.2.840.10008.5.1.4.1.1.481.11";
+        public const String RTRadiationSetStorage = "1.2.840.10008.5.1.4.1.1.481.12";
+        public const String C_ArmPhoton_ElectronRadiationStorage = "1.2.840.10008.5.1.4.1.1.481.13";
         public const String RTBeamsDeliveryInstructionStorage = "1.2.840.10008.5.1.4.34.7";
         public const String RTBrachyApplicationSetupDeliveryInstructionStorage = "1.2.840.10008.5.1.4.34.10";
     }

@@ -251,9 +251,9 @@ namespace EvilDICOM.RT
         {
             DoseValues = DoseValues.Select(d => d/totalDose).ToList();
             var _16b = 1 / Math.Pow(2, 16);
-            _doseObject.Dose​Grid​Scaling.Data = _16b;
-            _doseObject.Dose​Units.Data = "RELATIVE";
-            _doseObject.Dose​Type.Data = "PHYSICAL";
+            _doseObject.DoseGridScaling.Data = _16b;
+            _doseObject.DoseUnits.Data = "RELATIVE";
+            _doseObject.DoseType.Data = "PHYSICAL";
 
             using (var stream = new MemoryStream())
             {
@@ -264,7 +264,7 @@ namespace EvilDICOM.RT
                     var bytes = BitConverter.GetBytes(integ);
                     binWriter.Write(integ);
                 }
-                var ows = new OtherWordString(TagHelper.Pixel​Data, stream.ToArray());
+                var ows = new OtherWordString(TagHelper.PixelData, stream.ToArray());
                 _doseObject.ToDICOMObject().Replace(ows);
             }
         }

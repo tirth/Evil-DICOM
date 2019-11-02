@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Dictionaries;
@@ -12,7 +13,7 @@ namespace EvilDICOM.CodeGenerator
 {
     public static class CodeGen
     {
-        public static void GenerateStuff()
+        public static void GenerateStuff(string outputDir)
         {
             var tags = new List<SyntaxNode>();
             var selectors = new List<SyntaxNode>();
@@ -86,13 +87,13 @@ namespace EvilDICOM.CodeGenerator
             }
 
             CodeGenHelper.PublicStaticClassFull(typeof(DICOMForge), forgeNodes)
-                .WriteOut("DICOMForge.cs");
+                .WriteOut(Path.Combine(outputDir, "DICOMForge.cs"));
 
             CodeGenHelper.PublicStaticClassFull(typeof(TagHelper), tags)
-                .WriteOut("TagHelper.cs");
+                .WriteOut(Path.Combine(outputDir, "TagHelper.cs"));
 
             CodeGenHelper.PublicPartialClassFull(typeof(DICOMSelector), selectors)
-                .WriteOut("DICOMSelectorProperties.cs");
+                .WriteOut(Path.Combine(outputDir, "DICOMSelectorProperties.cs"));
 
             G.ClassDeclaration(typeof(SequenceSelector).Name,
                     null,
@@ -103,7 +104,7 @@ namespace EvilDICOM.CodeGenerator
                     seqSelectors)
                 .AddNamespace(typeof(SequenceSelector).Namespace)
                 .AddImports()
-                .WriteOut("SequenceSelectorProperties.cs");
+                .WriteOut(Path.Combine(outputDir, "SequenceSelectorProperties.cs"));
         }
 
         // TODO
