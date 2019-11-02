@@ -1,0 +1,39 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="NetStandard" #>
+<#@ assembly name="$(ProjectDir)$(OutDir)EvilDICOM.CodeGenerator.dll" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="EvilDICOM.CodeGenerator" #>
+<#@ output extension=".cs" #>
+<#
+    var dictEntries = DicomDefinitionLoader.LoadCurrentDictionary()
+        .Where(d => !string.IsNullOrEmpty(d.Keyword))
+        .ToList();
+#>
+using System.Collections.Generic;
+
+namespace EvilDICOM.Core.Dictionaries
+{
+    public class TagInfo
+    {
+        public string Description { get; set; }
+        public string VR { get; set; }
+    }
+
+    public static partial class TagDictionary
+    {
+        public static readonly Dictionary<string, TagInfo> Tags = new Dictionary<string, TagInfo>
+        {
+<#
+        foreach (var entry in dictEntries) 
+        {
+#>
+            {"<#= entry.Id #>", new TagInfo {Description = "<#= entry.Keyword #>", VR = "<#= entry.VR #>"}},
+<#
+        }
+#>
+        };
+    }
+}
