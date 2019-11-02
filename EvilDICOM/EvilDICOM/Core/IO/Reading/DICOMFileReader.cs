@@ -82,6 +82,41 @@ namespace EvilDICOM.Core.IO.Reading
             return new DICOMObject(elements);
         }
 
+        public static IEnumerable<IDICOMElement> ReadEnum(string filePath,
+            TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN,
+            bool includeMeta = false)
+        {
+            var enc = StringEncoding.ISO_IR_192;
+            var syntax = trySyntax;
+
+            using (var dr = new DICOMBinaryReader(filePath))
+                return ReadReader(dr, syntax, enc, includeMeta);
+        }
+
+        public static IEnumerable<IDICOMElement> ReadEnum(byte[] fileBytes,
+            TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN,
+            bool includeMeta = false)
+        {
+            var enc = StringEncoding.ISO_IR_192;
+            var syntax = trySyntax;
+
+            using (var dr = new DICOMBinaryReader(fileBytes))
+                return ReadReader(dr, syntax, enc, includeMeta);
+        }
+
+        private static IEnumerable<IDICOMElement> ReadReader(DICOMBinaryReader dr, TransferSyntax syntax, StringEncoding enc, bool includeMeta)
+        {
+            DICOMPreambleReader.Read(dr);
+
+            var metaElements = ReadFileMetadata(dr, ref syntax, ref enc);
+            if (includeMeta)
+                foreach (var metaElement in metaElements)
+                    yield return metaElement;
+
+            foreach (var element in DICOMElementReader.ReadAllElementsEnum(dr, syntax, enc))
+                yield return element;
+        }
+
 
         /// <summary>
         ///     Read the meta data from the DICOM object

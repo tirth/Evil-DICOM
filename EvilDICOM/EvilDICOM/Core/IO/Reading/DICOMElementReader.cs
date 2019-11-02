@@ -1,5 +1,6 @@
 ﻿#region
 
+using System;
 using System.Collections.Generic;
 using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Element;
@@ -145,6 +146,19 @@ namespace EvilDICOM.Core.IO.Reading
 
         #region READ ALL ELEMENT METHODS
 
+        public static IEnumerable<IDICOMElement> ReadAllElementsEnum(DICOMBinaryReader dr, TransferSyntax syntax, StringEncoding enc)
+        {
+            switch (syntax)
+            {
+                case TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN:
+                    return ReadAllElementsImplicitLittleEndianEnum(dr, enc);
+                case TransferSyntax.EXPLICIT_VR_BIG_ENDIAN:
+                    throw new NotImplementedException("no explicit big endian");
+                default:
+                    throw new NotImplementedException("no explicit little endian");
+            }
+        }
+
         public static List<IDICOMElement> ReadAllElements(DICOMBinaryReader dr, TransferSyntax syntax, StringEncoding enc)
         {
             List<IDICOMElement> elements;
@@ -161,6 +175,12 @@ namespace EvilDICOM.Core.IO.Reading
                     break;
             }
             return elements;
+        }
+
+        public static IEnumerable<IDICOMElement> ReadAllElementsImplicitLittleEndianEnum(DICOMBinaryReader dr, StringEncoding enc)
+        {
+            while (dr.StreamPosition < dr.StreamLength)
+                yield return ReadElementImplicitLittleEndian(dr, enc);
         }
 
         /// <summary>
