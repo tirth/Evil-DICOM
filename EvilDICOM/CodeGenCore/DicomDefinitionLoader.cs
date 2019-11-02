@@ -38,6 +38,7 @@ namespace EvilDICOM.CodeGenerator
             return file.FullName;
         }
 
+        // TODO: parse retired tags info
         private static IEnumerable<List<string>> GetTableData(int partNum, string tableId)
         {
             var doc = XDocument.Load(Path.Combine(DefinitionDir, $"part{partNum:D2}.xml"));

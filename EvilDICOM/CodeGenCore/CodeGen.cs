@@ -20,7 +20,11 @@ namespace EvilDICOM.CodeGenerator
             var seqSelectors = new List<SyntaxNode>();
             var forgeNodes = new List<SyntaxNode>();
 
-            foreach (var entry in DicomDefinitionLoader.LoadCurrentDictionary().Where(d => !string.IsNullOrEmpty(d.Keyword)))
+            var dictEntries = DicomDefinitionLoader.LoadCurrentDictionary()
+                .Where(d => !string.IsNullOrEmpty(d.Keyword))
+                .ToList();
+
+            foreach (var entry in dictEntries)
             {
                 tags.Add(entry.GenerateTag());
 
