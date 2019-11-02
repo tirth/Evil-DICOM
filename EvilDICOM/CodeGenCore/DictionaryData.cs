@@ -2,7 +2,13 @@
 {
     public class DictionaryData
     {
-        public string Id { get; set; }
+        private string _id;
+        public string Id
+        {
+            get => _id;
+            set => _id = value.Replace("\u200B", "");
+        }
+
         public string Name { get; internal set; }
 
         private string _keyword;

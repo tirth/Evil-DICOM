@@ -171,6 +171,118 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public OtherByteString RTVMetaInformationVersion
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("00020031"));
+            }
+        }
+
+        public List<OtherByteString> RTVMetaInformationVersion_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("00020031").ToList();
+            }
+        }
+
+        public UniqueIdentifier RTVCommunicationSOPClassUID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("00020032"));
+            }
+        }
+
+        public List<UniqueIdentifier> RTVCommunicationSOPClassUID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("00020032").ToList();
+            }
+        }
+
+        public UniqueIdentifier RTVCommunicationSOPInstanceUID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("00020033"));
+            }
+        }
+
+        public List<UniqueIdentifier> RTVCommunicationSOPInstanceUID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("00020033").ToList();
+            }
+        }
+
+        public OtherByteString RTVSourceIdentifier
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("00020035"));
+            }
+        }
+
+        public List<OtherByteString> RTVSourceIdentifier_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("00020035").ToList();
+            }
+        }
+
+        public OtherByteString RTVFlowIdentifier
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("00020036"));
+            }
+        }
+
+        public List<OtherByteString> RTVFlowIdentifier_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("00020036").ToList();
+            }
+        }
+
+        public UnsignedLong RTVFlowRTPSamplingRate
+        {
+            get
+            {
+                return (UnsignedLong)(Items.FindFirst<UnsignedLong>("00020037"));
+            }
+        }
+
+        public List<UnsignedLong> RTVFlowRTPSamplingRate_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedLong>("00020037").ToList();
+            }
+        }
+
+        public FloatingPointDouble RTVFlowActualFrameDuration
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("00020038"));
+            }
+        }
+
+        public List<FloatingPointDouble> RTVFlowActualFrameDuration_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("00020038").ToList();
+            }
+        }
+
         public UniqueIdentifier PrivateInformationCreatorUID
         {
             get
@@ -8619,6 +8731,1686 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public DecimalString WhitePoint
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160001"));
+            }
+        }
+
+        public List<DecimalString> WhitePoint_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160001").ToList();
+            }
+        }
+
+        public DecimalString PrimaryChromaticities
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160002"));
+            }
+        }
+
+        public List<DecimalString> PrimaryChromaticities_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160002").ToList();
+            }
+        }
+
+        public UnlimitedText BatteryLevel
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("00160003"));
+            }
+        }
+
+        public List<UnlimitedText> BatteryLevel_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("00160003").ToList();
+            }
+        }
+
+        public DecimalString ExposureTimeInSeconds
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160004"));
+            }
+        }
+
+        public List<DecimalString> ExposureTimeInSeconds_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160004").ToList();
+            }
+        }
+
+        public DecimalString FNumber
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160005"));
+            }
+        }
+
+        public List<DecimalString> FNumber_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160005").ToList();
+            }
+        }
+
+        public IntegerString OECFRows
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("00160006"));
+            }
+        }
+
+        public List<IntegerString> OECFRows_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("00160006").ToList();
+            }
+        }
+
+        public IntegerString OECFColumns
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("00160007"));
+            }
+        }
+
+        public List<IntegerString> OECFColumns_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("00160007").ToList();
+            }
+        }
+
+        public UnlimitedCharacter OECFColumnNames
+        {
+            get
+            {
+                return (UnlimitedCharacter)(Items.FindFirst<UnlimitedCharacter>("00160008"));
+            }
+        }
+
+        public List<UnlimitedCharacter> OECFColumnNames_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedCharacter>("00160008").ToList();
+            }
+        }
+
+        public DecimalString OECFValues
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160009"));
+            }
+        }
+
+        public List<DecimalString> OECFValues_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160009").ToList();
+            }
+        }
+
+        public IntegerString SpatialFrequencyResponseRows
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016000A"));
+            }
+        }
+
+        public List<IntegerString> SpatialFrequencyResponseRows_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016000A").ToList();
+            }
+        }
+
+        public IntegerString SpatialFrequencyResponseColumns
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016000B"));
+            }
+        }
+
+        public List<IntegerString> SpatialFrequencyResponseColumns_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016000B").ToList();
+            }
+        }
+
+        public UnlimitedCharacter SpatialFrequencyResponseColumnNames
+        {
+            get
+            {
+                return (UnlimitedCharacter)(Items.FindFirst<UnlimitedCharacter>("0016000C"));
+            }
+        }
+
+        public List<UnlimitedCharacter> SpatialFrequencyResponseColumnNames_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedCharacter>("0016000C").ToList();
+            }
+        }
+
+        public DecimalString SpatialFrequencyResponseValues
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("0016000D"));
+            }
+        }
+
+        public List<DecimalString> SpatialFrequencyResponseValues_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("0016000D").ToList();
+            }
+        }
+
+        public IntegerString ColorFilterArrayPatternRows
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016000E"));
+            }
+        }
+
+        public List<IntegerString> ColorFilterArrayPatternRows_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016000E").ToList();
+            }
+        }
+
+        public IntegerString ColorFilterArrayPatternColumns
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016000F"));
+            }
+        }
+
+        public List<IntegerString> ColorFilterArrayPatternColumns_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016000F").ToList();
+            }
+        }
+
+        public DecimalString ColorFilterArrayPatternValues
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160010"));
+            }
+        }
+
+        public List<DecimalString> ColorFilterArrayPatternValues_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160010").ToList();
+            }
+        }
+
+        public UnsignedShort FlashFiringStatus
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160011"));
+            }
+        }
+
+        public List<UnsignedShort> FlashFiringStatus_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160011").ToList();
+            }
+        }
+
+        public UnsignedShort FlashReturnStatus
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160012"));
+            }
+        }
+
+        public List<UnsignedShort> FlashReturnStatus_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160012").ToList();
+            }
+        }
+
+        public UnsignedShort FlashMode
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160013"));
+            }
+        }
+
+        public List<UnsignedShort> FlashMode_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160013").ToList();
+            }
+        }
+
+        public UnsignedShort FlashFunctionPresent
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160014"));
+            }
+        }
+
+        public List<UnsignedShort> FlashFunctionPresent_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160014").ToList();
+            }
+        }
+
+        public UnsignedShort FlashRedEyeMode
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160015"));
+            }
+        }
+
+        public List<UnsignedShort> FlashRedEyeMode_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160015").ToList();
+            }
+        }
+
+        public UnsignedShort ExposureProgram
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160016"));
+            }
+        }
+
+        public List<UnsignedShort> ExposureProgram_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160016").ToList();
+            }
+        }
+
+        public UnlimitedText SpectralSensitivity
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("00160017"));
+            }
+        }
+
+        public List<UnlimitedText> SpectralSensitivity_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("00160017").ToList();
+            }
+        }
+
+        public IntegerString PhotographicSensitivity
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("00160018"));
+            }
+        }
+
+        public List<IntegerString> PhotographicSensitivity_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("00160018").ToList();
+            }
+        }
+
+        public IntegerString SelfTimerMode
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("00160019"));
+            }
+        }
+
+        public List<IntegerString> SelfTimerMode_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("00160019").ToList();
+            }
+        }
+
+        public UnsignedShort SensitivityType
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("0016001A"));
+            }
+        }
+
+        public List<UnsignedShort> SensitivityType_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("0016001A").ToList();
+            }
+        }
+
+        public IntegerString StandardOutputSensitivity
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016001B"));
+            }
+        }
+
+        public List<IntegerString> StandardOutputSensitivity_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016001B").ToList();
+            }
+        }
+
+        public IntegerString RecommendedExposureIndex
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016001C"));
+            }
+        }
+
+        public List<IntegerString> RecommendedExposureIndex_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016001C").ToList();
+            }
+        }
+
+        public IntegerString ISOSpeed
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016001D"));
+            }
+        }
+
+        public List<IntegerString> ISOSpeed_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016001D").ToList();
+            }
+        }
+
+        public IntegerString ISOSpeedLatitudeyyy
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016001E"));
+            }
+        }
+
+        public List<IntegerString> ISOSpeedLatitudeyyy_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016001E").ToList();
+            }
+        }
+
+        public IntegerString ISOSpeedLatitudezzz
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016001F"));
+            }
+        }
+
+        public List<IntegerString> ISOSpeedLatitudezzz_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016001F").ToList();
+            }
+        }
+
+        public UnlimitedText EXIFVersion
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("00160020"));
+            }
+        }
+
+        public List<UnlimitedText> EXIFVersion_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("00160020").ToList();
+            }
+        }
+
+        public DecimalString ShutterSpeedValue
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160021"));
+            }
+        }
+
+        public List<DecimalString> ShutterSpeedValue_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160021").ToList();
+            }
+        }
+
+        public DecimalString ApertureValue
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160022"));
+            }
+        }
+
+        public List<DecimalString> ApertureValue_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160022").ToList();
+            }
+        }
+
+        public DecimalString BrightnessValue
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160023"));
+            }
+        }
+
+        public List<DecimalString> BrightnessValue_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160023").ToList();
+            }
+        }
+
+        public DecimalString ExposureBiasValue
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160024"));
+            }
+        }
+
+        public List<DecimalString> ExposureBiasValue_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160024").ToList();
+            }
+        }
+
+        public DecimalString MaxApertureValue
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160025"));
+            }
+        }
+
+        public List<DecimalString> MaxApertureValue_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160025").ToList();
+            }
+        }
+
+        public DecimalString SubjectDistance
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160026"));
+            }
+        }
+
+        public List<DecimalString> SubjectDistance_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160026").ToList();
+            }
+        }
+
+        public UnsignedShort MeteringMode
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160027"));
+            }
+        }
+
+        public List<UnsignedShort> MeteringMode_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160027").ToList();
+            }
+        }
+
+        public UnsignedShort LightSource
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160028"));
+            }
+        }
+
+        public List<UnsignedShort> LightSource_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160028").ToList();
+            }
+        }
+
+        public DecimalString FocalLength
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160029"));
+            }
+        }
+
+        public List<DecimalString> FocalLength_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160029").ToList();
+            }
+        }
+
+        public IntegerString SubjectArea
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016002A"));
+            }
+        }
+
+        public List<IntegerString> SubjectArea_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016002A").ToList();
+            }
+        }
+
+        public OtherByteString MakerNote
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("0016002B"));
+            }
+        }
+
+        public List<OtherByteString> MakerNote_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("0016002B").ToList();
+            }
+        }
+
+        public DecimalString Temperature
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160030"));
+            }
+        }
+
+        public List<DecimalString> Temperature_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160030").ToList();
+            }
+        }
+
+        public DecimalString Humidity
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160031"));
+            }
+        }
+
+        public List<DecimalString> Humidity_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160031").ToList();
+            }
+        }
+
+        public DecimalString Pressure
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160032"));
+            }
+        }
+
+        public List<DecimalString> Pressure_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160032").ToList();
+            }
+        }
+
+        public DecimalString WaterDepth
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160033"));
+            }
+        }
+
+        public List<DecimalString> WaterDepth_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160033").ToList();
+            }
+        }
+
+        public DecimalString Acceleration
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160034"));
+            }
+        }
+
+        public List<DecimalString> Acceleration_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160034").ToList();
+            }
+        }
+
+        public DecimalString CameraElevationAngle
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160035"));
+            }
+        }
+
+        public List<DecimalString> CameraElevationAngle_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160035").ToList();
+            }
+        }
+
+        public DecimalString FlashEnergy
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160036"));
+            }
+        }
+
+        public List<DecimalString> FlashEnergy_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160036").ToList();
+            }
+        }
+
+        public IntegerString SubjectLocation
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("00160037"));
+            }
+        }
+
+        public List<IntegerString> SubjectLocation_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("00160037").ToList();
+            }
+        }
+
+        public DecimalString PhotographicExposureIndex
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160038"));
+            }
+        }
+
+        public List<DecimalString> PhotographicExposureIndex_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160038").ToList();
+            }
+        }
+
+        public UnsignedShort SensingMethod
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160039"));
+            }
+        }
+
+        public List<UnsignedShort> SensingMethod_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160039").ToList();
+            }
+        }
+
+        public UnsignedShort FileSource
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("0016003A"));
+            }
+        }
+
+        public List<UnsignedShort> FileSource_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("0016003A").ToList();
+            }
+        }
+
+        public UnsignedShort SceneType
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("0016003B"));
+            }
+        }
+
+        public List<UnsignedShort> SceneType_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("0016003B").ToList();
+            }
+        }
+
+        public UnsignedShort CustomRendered
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160041"));
+            }
+        }
+
+        public List<UnsignedShort> CustomRendered_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160041").ToList();
+            }
+        }
+
+        public UnsignedShort ExposureMode
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160042"));
+            }
+        }
+
+        public List<UnsignedShort> ExposureMode_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160042").ToList();
+            }
+        }
+
+        public UnsignedShort WhiteBalance
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160043"));
+            }
+        }
+
+        public List<UnsignedShort> WhiteBalance_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160043").ToList();
+            }
+        }
+
+        public DecimalString DigitalZoomRatio
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160044"));
+            }
+        }
+
+        public List<DecimalString> DigitalZoomRatio_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160044").ToList();
+            }
+        }
+
+        public IntegerString FocalLengthIn35mmFilm
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("00160045"));
+            }
+        }
+
+        public List<IntegerString> FocalLengthIn35mmFilm_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("00160045").ToList();
+            }
+        }
+
+        public UnsignedShort SceneCaptureType
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160046"));
+            }
+        }
+
+        public List<UnsignedShort> SceneCaptureType_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160046").ToList();
+            }
+        }
+
+        public UnsignedShort GainControl
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160047"));
+            }
+        }
+
+        public List<UnsignedShort> GainControl_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160047").ToList();
+            }
+        }
+
+        public UnsignedShort Contrast
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160048"));
+            }
+        }
+
+        public List<UnsignedShort> Contrast_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160048").ToList();
+            }
+        }
+
+        public UnsignedShort Saturation
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160049"));
+            }
+        }
+
+        public List<UnsignedShort> Saturation_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160049").ToList();
+            }
+        }
+
+        public UnsignedShort Sharpness
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("0016004A"));
+            }
+        }
+
+        public List<UnsignedShort> Sharpness_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("0016004A").ToList();
+            }
+        }
+
+        public OtherByteString DeviceSettingDescription
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("0016004B"));
+            }
+        }
+
+        public List<OtherByteString> DeviceSettingDescription_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("0016004B").ToList();
+            }
+        }
+
+        public UnsignedShort SubjectDistanceRange
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("0016004C"));
+            }
+        }
+
+        public List<UnsignedShort> SubjectDistanceRange_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("0016004C").ToList();
+            }
+        }
+
+        public UnlimitedText CameraOwnerName
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("0016004D"));
+            }
+        }
+
+        public List<UnlimitedText> CameraOwnerName_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("0016004D").ToList();
+            }
+        }
+
+        public DecimalString LensSpecification
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("0016004E"));
+            }
+        }
+
+        public List<DecimalString> LensSpecification_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("0016004E").ToList();
+            }
+        }
+
+        public UnlimitedText LensMake
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("0016004F"));
+            }
+        }
+
+        public List<UnlimitedText> LensMake_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("0016004F").ToList();
+            }
+        }
+
+        public UnlimitedText LensModel
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("00160050"));
+            }
+        }
+
+        public List<UnlimitedText> LensModel_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("00160050").ToList();
+            }
+        }
+
+        public UnlimitedText LensSerialNumber
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("00160051"));
+            }
+        }
+
+        public List<UnlimitedText> LensSerialNumber_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("00160051").ToList();
+            }
+        }
+
+        public CodeString InteroperabilityIndex
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00160061"));
+            }
+        }
+
+        public List<CodeString> InteroperabilityIndex_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00160061").ToList();
+            }
+        }
+
+        public OtherByteString InteroperabilityVersion
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("00160062"));
+            }
+        }
+
+        public List<OtherByteString> InteroperabilityVersion_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("00160062").ToList();
+            }
+        }
+
+        public OtherByteString GPSVersionID
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("00160070"));
+            }
+        }
+
+        public List<OtherByteString> GPSVersionID_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("00160070").ToList();
+            }
+        }
+
+        public CodeString GPSLatitudeRef
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00160071"));
+            }
+        }
+
+        public List<CodeString> GPSLatitudeRef_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00160071").ToList();
+            }
+        }
+
+        public DecimalString GPSLatitude
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160072"));
+            }
+        }
+
+        public List<DecimalString> GPSLatitude_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160072").ToList();
+            }
+        }
+
+        public CodeString GPSLongitudeRef
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00160073"));
+            }
+        }
+
+        public List<CodeString> GPSLongitudeRef_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00160073").ToList();
+            }
+        }
+
+        public DecimalString GPSLongitude
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160074"));
+            }
+        }
+
+        public List<DecimalString> GPSLongitude_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160074").ToList();
+            }
+        }
+
+        public UnsignedShort GPSAltitudeRef
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00160075"));
+            }
+        }
+
+        public List<UnsignedShort> GPSAltitudeRef_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00160075").ToList();
+            }
+        }
+
+        public DecimalString GPSAltitude
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160076"));
+            }
+        }
+
+        public List<DecimalString> GPSAltitude_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160076").ToList();
+            }
+        }
+
+        public Element.DateTime GPSTimeStamp
+        {
+            get
+            {
+                return (Element.DateTime)(Items.FindFirst<Element.DateTime>("00160077"));
+            }
+        }
+
+        public List<Element.DateTime> GPSTimeStamp_
+        {
+            get
+            {
+                return Items.FindAll<Element.DateTime>("00160077").ToList();
+            }
+        }
+
+        public UnlimitedText GPSSatellites
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("00160078"));
+            }
+        }
+
+        public List<UnlimitedText> GPSSatellites_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("00160078").ToList();
+            }
+        }
+
+        public CodeString GPSStatus
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00160079"));
+            }
+        }
+
+        public List<CodeString> GPSStatus_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00160079").ToList();
+            }
+        }
+
+        public CodeString GPSMeasureMode
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("0016007A"));
+            }
+        }
+
+        public List<CodeString> GPSMeasureMode_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("0016007A").ToList();
+            }
+        }
+
+        public DecimalString GPSDOP
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("0016007B"));
+            }
+        }
+
+        public List<DecimalString> GPSDOP_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("0016007B").ToList();
+            }
+        }
+
+        public CodeString GPSSpeedRef
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("0016007C"));
+            }
+        }
+
+        public List<CodeString> GPSSpeedRef_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("0016007C").ToList();
+            }
+        }
+
+        public DecimalString GPSSpeed
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("0016007D"));
+            }
+        }
+
+        public List<DecimalString> GPSSpeed_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("0016007D").ToList();
+            }
+        }
+
+        public CodeString GPSTrackRef
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("0016007E"));
+            }
+        }
+
+        public List<CodeString> GPSTrackRef_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("0016007E").ToList();
+            }
+        }
+
+        public DecimalString GPSTrack
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("0016007F"));
+            }
+        }
+
+        public List<DecimalString> GPSTrack_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("0016007F").ToList();
+            }
+        }
+
+        public CodeString GPSImgDirectionRef
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00160080"));
+            }
+        }
+
+        public List<CodeString> GPSImgDirectionRef_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00160080").ToList();
+            }
+        }
+
+        public DecimalString GPSImgDirection
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160081"));
+            }
+        }
+
+        public List<DecimalString> GPSImgDirection_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160081").ToList();
+            }
+        }
+
+        public UnlimitedText GPSMapDatum
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("00160082"));
+            }
+        }
+
+        public List<UnlimitedText> GPSMapDatum_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("00160082").ToList();
+            }
+        }
+
+        public CodeString GPSDestLatitudeRef
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00160083"));
+            }
+        }
+
+        public List<CodeString> GPSDestLatitudeRef_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00160083").ToList();
+            }
+        }
+
+        public DecimalString GPSDestLatitude
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160084"));
+            }
+        }
+
+        public List<DecimalString> GPSDestLatitude_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160084").ToList();
+            }
+        }
+
+        public CodeString GPSDestLongitudeRef
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00160085"));
+            }
+        }
+
+        public List<CodeString> GPSDestLongitudeRef_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00160085").ToList();
+            }
+        }
+
+        public DecimalString GPSDestLongitude
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160086"));
+            }
+        }
+
+        public List<DecimalString> GPSDestLongitude_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160086").ToList();
+            }
+        }
+
+        public CodeString GPSDestBearingRef
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00160087"));
+            }
+        }
+
+        public List<CodeString> GPSDestBearingRef_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00160087").ToList();
+            }
+        }
+
+        public DecimalString GPSDestBearing
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00160088"));
+            }
+        }
+
+        public List<DecimalString> GPSDestBearing_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00160088").ToList();
+            }
+        }
+
+        public CodeString GPSDestDistanceRef
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00160089"));
+            }
+        }
+
+        public List<CodeString> GPSDestDistanceRef_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00160089").ToList();
+            }
+        }
+
+        public DecimalString GPSDestDistance
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("0016008A"));
+            }
+        }
+
+        public List<DecimalString> GPSDestDistance_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("0016008A").ToList();
+            }
+        }
+
+        public OtherByteString GPSProcessingMethod
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("0016008B"));
+            }
+        }
+
+        public List<OtherByteString> GPSProcessingMethod_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("0016008B").ToList();
+            }
+        }
+
+        public OtherByteString GPSAreaInformation
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("0016008C"));
+            }
+        }
+
+        public List<OtherByteString> GPSAreaInformation_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("0016008C").ToList();
+            }
+        }
+
+        public Element.DateTime GPSDateStamp
+        {
+            get
+            {
+                return (Element.DateTime)(Items.FindFirst<Element.DateTime>("0016008D"));
+            }
+        }
+
+        public List<Element.DateTime> GPSDateStamp_
+        {
+            get
+            {
+                return Items.FindAll<Element.DateTime>("0016008D").ToList();
+            }
+        }
+
+        public IntegerString GPSDifferential
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("0016008E"));
+            }
+        }
+
+        public List<IntegerString> GPSDifferential_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("0016008E").ToList();
+            }
+        }
+
         public LongString ContrastBolusAgent
         {
             get
@@ -9608,6 +11400,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<Sequence>("0018100A").ToList();
+            }
+        }
+
+        public UniqueIdentifier ManufacturerDeviceClassUID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("0018100B"));
+            }
+        }
+
+        public List<UniqueIdentifier> ManufacturerDeviceClassUID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("0018100B").ToList();
             }
         }
 
@@ -12280,6 +14088,150 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<UnsignedShort>("00181624").ToList();
+            }
+        }
+
+        public CodeString OutlineShapeType
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00181630"));
+            }
+        }
+
+        public List<CodeString> OutlineShapeType_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00181630").ToList();
+            }
+        }
+
+        public FloatingPointDouble OutlineLeftVerticalEdge
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("00181631"));
+            }
+        }
+
+        public List<FloatingPointDouble> OutlineLeftVerticalEdge_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("00181631").ToList();
+            }
+        }
+
+        public FloatingPointDouble OutlineRightVerticalEdge
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("00181632"));
+            }
+        }
+
+        public List<FloatingPointDouble> OutlineRightVerticalEdge_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("00181632").ToList();
+            }
+        }
+
+        public FloatingPointDouble OutlineUpperHorizontalEdge
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("00181633"));
+            }
+        }
+
+        public List<FloatingPointDouble> OutlineUpperHorizontalEdge_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("00181633").ToList();
+            }
+        }
+
+        public FloatingPointDouble OutlineLowerHorizontalEdge
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("00181634"));
+            }
+        }
+
+        public List<FloatingPointDouble> OutlineLowerHorizontalEdge_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("00181634").ToList();
+            }
+        }
+
+        public FloatingPointDouble CenterOfCircularOutline
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("00181635"));
+            }
+        }
+
+        public List<FloatingPointDouble> CenterOfCircularOutline_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("00181635").ToList();
+            }
+        }
+
+        public FloatingPointDouble DiameterOfCircularOutline
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("00181636"));
+            }
+        }
+
+        public List<FloatingPointDouble> DiameterOfCircularOutline_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("00181636").ToList();
+            }
+        }
+
+        public UnsignedLong NumberOfPolygonalVertices
+        {
+            get
+            {
+                return (UnsignedLong)(Items.FindFirst<UnsignedLong>("00181637"));
+            }
+        }
+
+        public List<UnsignedLong> NumberOfPolygonalVertices_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedLong>("00181637").ToList();
+            }
+        }
+
+        public OtherFloatString VerticesOfThePolygonalOutline
+        {
+            get
+            {
+                return (OtherFloatString)(Items.FindFirst<OtherFloatString>("00181638"));
+            }
+        }
+
+        public List<OtherFloatString> VerticesOfThePolygonalOutline_
+        {
+            get
+            {
+                return Items.FindAll<OtherFloatString>("00181638").ToList();
             }
         }
 
@@ -25099,6 +27051,118 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence SurgicallyInducedAstigmatismSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00221045"));
+            }
+        }
+
+        public List<Sequence> SurgicallyInducedAstigmatismSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00221045").ToList();
+            }
+        }
+
+        public CodeString TypeOfOpticalCorrection
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00221046"));
+            }
+        }
+
+        public List<CodeString> TypeOfOpticalCorrection_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00221046").ToList();
+            }
+        }
+
+        public Sequence ToricIOLPowerSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00221047"));
+            }
+        }
+
+        public List<Sequence> ToricIOLPowerSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00221047").ToList();
+            }
+        }
+
+        public Sequence PredictedToricErrorSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00221048"));
+            }
+        }
+
+        public List<Sequence> PredictedToricErrorSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00221048").ToList();
+            }
+        }
+
+        public CodeString PreSelectedForImplantation
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00221049"));
+            }
+        }
+
+        public List<CodeString> PreSelectedForImplantation_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00221049").ToList();
+            }
+        }
+
+        public Sequence ToricIOLPowerForExactEmmetropiaSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("0022104A"));
+            }
+        }
+
+        public List<Sequence> ToricIOLPowerForExactEmmetropiaSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("0022104A").ToList();
+            }
+        }
+
+        public Sequence ToricIOLPowerForExactTargetRefractionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("0022104B"));
+            }
+        }
+
+        public List<Sequence> ToricIOLPowerForExactTargetRefractionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("0022104B").ToList();
+            }
+        }
+
         public Sequence OphthalmicAxialLengthMeasurementsSequence
         {
             get
@@ -25432,6 +27496,54 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<Sequence>("00221128").ToList();
+            }
+        }
+
+        public Sequence CalculationCommentSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("0022112A"));
+            }
+        }
+
+        public List<Sequence> CalculationCommentSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("0022112A").ToList();
+            }
+        }
+
+        public CodeString CalculationCommentType
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("0022112B"));
+            }
+        }
+
+        public List<CodeString> CalculationCommentType_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("0022112B").ToList();
+            }
+        }
+
+        public LongText CalculationComment
+        {
+            get
+            {
+                return (LongText)(Items.FindFirst<LongText>("0022112C"));
+            }
+        }
+
+        public List<LongText> CalculationComment_
+        {
+            get
+            {
+                return Items.FindAll<LongText>("0022112C").ToList();
             }
         }
 
@@ -32603,6 +34715,38 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public UnlimitedText ReasonForVisit
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("00321066"));
+            }
+        }
+
+        public List<UnlimitedText> ReasonForVisit_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("00321066").ToList();
+            }
+        }
+
+        public Sequence ReasonForVisitCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00321067"));
+            }
+        }
+
+        public List<Sequence> ReasonForVisitCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00321067").ToList();
+            }
+        }
+
         public LongString RequestedContrastAgent
         {
             get
@@ -32632,6 +34776,198 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<LongText>("00324000").ToList();
+            }
+        }
+
+        public Sequence FlowIdentifierSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00340001"));
+            }
+        }
+
+        public List<Sequence> FlowIdentifierSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00340001").ToList();
+            }
+        }
+
+        public OtherByteString FlowIdentifier
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("00340002"));
+            }
+        }
+
+        public List<OtherByteString> FlowIdentifier_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("00340002").ToList();
+            }
+        }
+
+        public UniqueIdentifier FlowTransferSyntaxUID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("00340003"));
+            }
+        }
+
+        public List<UniqueIdentifier> FlowTransferSyntaxUID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("00340003").ToList();
+            }
+        }
+
+        public UnsignedLong FlowRTPSamplingRate
+        {
+            get
+            {
+                return (UnsignedLong)(Items.FindFirst<UnsignedLong>("00340004"));
+            }
+        }
+
+        public List<UnsignedLong> FlowRTPSamplingRate_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedLong>("00340004").ToList();
+            }
+        }
+
+        public OtherByteString SourceIdentifier
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("00340005"));
+            }
+        }
+
+        public List<OtherByteString> SourceIdentifier_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("00340005").ToList();
+            }
+        }
+
+        public OtherByteString FrameOriginTimestamp
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("00340007"));
+            }
+        }
+
+        public List<OtherByteString> FrameOriginTimestamp_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("00340007").ToList();
+            }
+        }
+
+        public CodeString IncludesImagingSubject
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00340008"));
+            }
+        }
+
+        public List<CodeString> IncludesImagingSubject_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00340008").ToList();
+            }
+        }
+
+        public Sequence FrameUsefulnessGroupSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00340009"));
+            }
+        }
+
+        public List<Sequence> FrameUsefulnessGroupSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00340009").ToList();
+            }
+        }
+
+        public Sequence RealTimeBulkDataFlowSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("0034000A"));
+            }
+        }
+
+        public List<Sequence> RealTimeBulkDataFlowSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("0034000A").ToList();
+            }
+        }
+
+        public Sequence CameraPositionGroupSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("0034000B"));
+            }
+        }
+
+        public List<Sequence> CameraPositionGroupSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("0034000B").ToList();
+            }
+        }
+
+        public CodeString IncludesInformation
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("0034000C"));
+            }
+        }
+
+        public List<CodeString> IncludesInformation_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("0034000C").ToList();
+            }
+        }
+
+        public Sequence TimeOfFrameGroupSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("0034000D"));
+            }
+        }
+
+        public List<Sequence> TimeOfFrameGroupSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("0034000D").ToList();
             }
         }
 
@@ -38907,6 +41243,22 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public UnsignedLong EncapsulatedDocumentLength
+        {
+            get
+            {
+                return (UnsignedLong)(Items.FindFirst<UnsignedLong>("00420015"));
+            }
+        }
+
+        public List<UnsignedLong> EncapsulatedDocumentLength_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedLong>("00420015").ToList();
+            }
+        }
+
         public ShortText ProductPackageIdentifier
         {
             get
@@ -39928,6 +42280,150 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<FloatingPointDouble>("00460106").ToList();
+            }
+        }
+
+        public Sequence CorneaMeasurementsSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00460110"));
+            }
+        }
+
+        public List<Sequence> CorneaMeasurementsSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00460110").ToList();
+            }
+        }
+
+        public Sequence SourceOfCorneaMeasurementDataCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00460111"));
+            }
+        }
+
+        public List<Sequence> SourceOfCorneaMeasurementDataCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00460111").ToList();
+            }
+        }
+
+        public Sequence SteepCornealAxisSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00460112"));
+            }
+        }
+
+        public List<Sequence> SteepCornealAxisSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00460112").ToList();
+            }
+        }
+
+        public Sequence FlatCornealAxisSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00460113"));
+            }
+        }
+
+        public List<Sequence> FlatCornealAxisSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00460113").ToList();
+            }
+        }
+
+        public FloatingPointDouble CornealPower
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("00460114"));
+            }
+        }
+
+        public List<FloatingPointDouble> CornealPower_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("00460114").ToList();
+            }
+        }
+
+        public FloatingPointDouble CornealAxis
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("00460115"));
+            }
+        }
+
+        public List<FloatingPointDouble> CornealAxis_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("00460115").ToList();
+            }
+        }
+
+        public Sequence CorneaMeasurementMethodCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00460116"));
+            }
+        }
+
+        public List<Sequence> CorneaMeasurementMethodCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00460116").ToList();
+            }
+        }
+
+        public FloatingPointSingle RefractiveIndexOfCornea
+        {
+            get
+            {
+                return (FloatingPointSingle)(Items.FindFirst<FloatingPointSingle>("00460117"));
+            }
+        }
+
+        public List<FloatingPointSingle> RefractiveIndexOfCornea_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointSingle>("00460117").ToList();
+            }
+        }
+
+        public FloatingPointSingle RefractiveIndexOfAqueousHumor
+        {
+            get
+            {
+                return (FloatingPointSingle)(Items.FindFirst<FloatingPointSingle>("00460118"));
+            }
+        }
+
+        public List<FloatingPointSingle> RefractiveIndexOfAqueousHumor_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointSingle>("00460118").ToList();
             }
         }
 
@@ -53755,6 +56251,38 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence NonconformingModifiedAttributesSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("04000551"));
+            }
+        }
+
+        public List<Sequence> NonconformingModifiedAttributesSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("04000551").ToList();
+            }
+        }
+
+        public OtherByteString NonconformingDataElementValue
+        {
+            get
+            {
+                return (OtherByteString)(Items.FindFirst<OtherByteString>("04000552"));
+            }
+        }
+
+        public List<OtherByteString> NonconformingDataElementValue_
+        {
+            get
+            {
+                return Items.FindAll<OtherByteString>("04000552").ToList();
+            }
+        }
+
         public Sequence OriginalAttributesSequence
         {
             get
@@ -57448,6 +59976,54 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<LongString>("300600C8").ToList();
+            }
+        }
+
+        public Sequence PatientLocationCoordinatesSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300600C9"));
+            }
+        }
+
+        public List<Sequence> PatientLocationCoordinatesSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300600C9").ToList();
+            }
+        }
+
+        public Sequence PatientLocationCoordinatesCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300600CA"));
+            }
+        }
+
+        public List<Sequence> PatientLocationCoordinatesCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300600CA").ToList();
+            }
+        }
+
+        public Sequence PatientSupportPositionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300600CB"));
+            }
+        }
+
+        public List<Sequence> PatientSupportPositionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300600CB").ToList();
             }
         }
 
@@ -65371,6 +67947,2214 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public UnsignedShort RTControlPointIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0600"));
+            }
+        }
+
+        public List<UnsignedShort> RTControlPointIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0600").ToList();
+            }
+        }
+
+        public UnsignedShort RadiationGenerationModeIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0601"));
+            }
+        }
+
+        public List<UnsignedShort> RadiationGenerationModeIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0601").ToList();
+            }
+        }
+
+        public UnsignedShort ReferencedDefinedDeviceIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0602"));
+            }
+        }
+
+        public List<UnsignedShort> ReferencedDefinedDeviceIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0602").ToList();
+            }
+        }
+
+        public UnsignedShort RadiationDoseIdentificationIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0603"));
+            }
+        }
+
+        public List<UnsignedShort> RadiationDoseIdentificationIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0603").ToList();
+            }
+        }
+
+        public UnsignedShort NumberOfRTControlPoints
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0604"));
+            }
+        }
+
+        public List<UnsignedShort> NumberOfRTControlPoints_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0604").ToList();
+            }
+        }
+
+        public UnsignedShort ReferencedRadiationGenerationModeIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0605"));
+            }
+        }
+
+        public List<UnsignedShort> ReferencedRadiationGenerationModeIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0605").ToList();
+            }
+        }
+
+        public UnsignedShort TreatmentPositionIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0606"));
+            }
+        }
+
+        public List<UnsignedShort> TreatmentPositionIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0606").ToList();
+            }
+        }
+
+        public UnsignedShort ReferencedDeviceIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0607"));
+            }
+        }
+
+        public List<UnsignedShort> ReferencedDeviceIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0607").ToList();
+            }
+        }
+
+        public LongString TreatmentPositionGroupLabel
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("300A0608"));
+            }
+        }
+
+        public List<LongString> TreatmentPositionGroupLabel_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("300A0608").ToList();
+            }
+        }
+
+        public UniqueIdentifier TreatmentPositionGroupUID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("300A0609"));
+            }
+        }
+
+        public List<UniqueIdentifier> TreatmentPositionGroupUID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("300A0609").ToList();
+            }
+        }
+
+        public Sequence TreatmentPositionGroupSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A060A"));
+            }
+        }
+
+        public List<Sequence> TreatmentPositionGroupSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A060A").ToList();
+            }
+        }
+
+        public UnsignedShort ReferencedTreatmentPositionIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A060B"));
+            }
+        }
+
+        public List<UnsignedShort> ReferencedTreatmentPositionIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A060B").ToList();
+            }
+        }
+
+        public UnsignedShort ReferencedRadiationDoseIdentificationIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A060C"));
+            }
+        }
+
+        public List<UnsignedShort> ReferencedRadiationDoseIdentificationIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A060C").ToList();
+            }
+        }
+
+        public FloatingPointDouble RTAccessoryHolderWaterEquivalentThickness
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A060D"));
+            }
+        }
+
+        public List<FloatingPointDouble> RTAccessoryHolderWaterEquivalentThickness_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A060D").ToList();
+            }
+        }
+
+        public UnsignedShort ReferencedRTAccessoryHolderDeviceIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A060E"));
+            }
+        }
+
+        public List<UnsignedShort> ReferencedRTAccessoryHolderDeviceIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A060E").ToList();
+            }
+        }
+
+        public CodeString RTAccessoryHolderSlotExistenceFlag
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A060F"));
+            }
+        }
+
+        public List<CodeString> RTAccessoryHolderSlotExistenceFlag_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A060F").ToList();
+            }
+        }
+
+        public Sequence RTAccessoryHolderSlotSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0610"));
+            }
+        }
+
+        public List<Sequence> RTAccessoryHolderSlotSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0610").ToList();
+            }
+        }
+
+        public LongString RTAccessoryHolderSlotID
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("300A0611"));
+            }
+        }
+
+        public List<LongString> RTAccessoryHolderSlotID_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("300A0611").ToList();
+            }
+        }
+
+        public FloatingPointDouble RTAccessoryHolderSlotDistance
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0612"));
+            }
+        }
+
+        public List<FloatingPointDouble> RTAccessoryHolderSlotDistance_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0612").ToList();
+            }
+        }
+
+        public FloatingPointDouble RTAccessorySlotDistance
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0613"));
+            }
+        }
+
+        public List<FloatingPointDouble> RTAccessorySlotDistance_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0613").ToList();
+            }
+        }
+
+        public Sequence RTAccessoryHolderDefinitionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0614"));
+            }
+        }
+
+        public List<Sequence> RTAccessoryHolderDefinitionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0614").ToList();
+            }
+        }
+
+        public LongString RTAccessoryDeviceSlotID
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("300A0615"));
+            }
+        }
+
+        public List<LongString> RTAccessoryDeviceSlotID_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("300A0615").ToList();
+            }
+        }
+
+        public Sequence RTRadiationSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0616"));
+            }
+        }
+
+        public List<Sequence> RTRadiationSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0616").ToList();
+            }
+        }
+
+        public Sequence RadiationDoseSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0617"));
+            }
+        }
+
+        public List<Sequence> RadiationDoseSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0617").ToList();
+            }
+        }
+
+        public Sequence RadiationDoseIdentificationSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0618"));
+            }
+        }
+
+        public List<Sequence> RadiationDoseIdentificationSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0618").ToList();
+            }
+        }
+
+        public LongString RadiationDoseIdentificationLabel
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("300A0619"));
+            }
+        }
+
+        public List<LongString> RadiationDoseIdentificationLabel_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("300A0619").ToList();
+            }
+        }
+
+        public CodeString ReferenceDoseType
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A061A"));
+            }
+        }
+
+        public List<CodeString> ReferenceDoseType_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A061A").ToList();
+            }
+        }
+
+        public CodeString PrimaryDoseValueIndicator
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A061B"));
+            }
+        }
+
+        public List<CodeString> PrimaryDoseValueIndicator_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A061B").ToList();
+            }
+        }
+
+        public Sequence DoseValuesSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A061C"));
+            }
+        }
+
+        public List<Sequence> DoseValuesSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A061C").ToList();
+            }
+        }
+
+        public CodeString DoseValuePurpose
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A061D"));
+            }
+        }
+
+        public List<CodeString> DoseValuePurpose_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A061D").ToList();
+            }
+        }
+
+        public FloatingPointDouble ReferenceDosePointCoordinates
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A061E"));
+            }
+        }
+
+        public List<FloatingPointDouble> ReferenceDosePointCoordinates_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A061E").ToList();
+            }
+        }
+
+        public Sequence RadiationDoseValuesParametersSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A061F"));
+            }
+        }
+
+        public List<Sequence> RadiationDoseValuesParametersSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A061F").ToList();
+            }
+        }
+
+        public Sequence MetersetToDoseMappingSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0620"));
+            }
+        }
+
+        public List<Sequence> MetersetToDoseMappingSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0620").ToList();
+            }
+        }
+
+        public Sequence ExpectedInVivoMeasurementValuesSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0621"));
+            }
+        }
+
+        public List<Sequence> ExpectedInVivoMeasurementValuesSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0621").ToList();
+            }
+        }
+
+        public UnsignedShort ExpectedInVivoMeasurementValueIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0622"));
+            }
+        }
+
+        public List<UnsignedShort> ExpectedInVivoMeasurementValueIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0622").ToList();
+            }
+        }
+
+        public LongString RadiationDoseInVivoMeasurementLabel
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("300A0623"));
+            }
+        }
+
+        public List<LongString> RadiationDoseInVivoMeasurementLabel_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("300A0623").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationDoseCentralAxisDisplacement
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0624"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationDoseCentralAxisDisplacement_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0624").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationDoseValue
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0625"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationDoseValue_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0625").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationDoseSourceToSkinDistance
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0626"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationDoseSourceToSkinDistance_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0626").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationDoseMeasurementPointCoordinates
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0627"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationDoseMeasurementPointCoordinates_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0627").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationDoseSourceToExternalContourDistance
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0628"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationDoseSourceToExternalContourDistance_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0628").ToList();
+            }
+        }
+
+        public Sequence RTToleranceSetSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0629"));
+            }
+        }
+
+        public List<Sequence> RTToleranceSetSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0629").ToList();
+            }
+        }
+
+        public LongString RTToleranceSetLabel
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("300A062A"));
+            }
+        }
+
+        public List<LongString> RTToleranceSetLabel_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("300A062A").ToList();
+            }
+        }
+
+        public Sequence AttributeToleranceValuesSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A062B"));
+            }
+        }
+
+        public List<Sequence> AttributeToleranceValuesSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A062B").ToList();
+            }
+        }
+
+        public FloatingPointDouble ToleranceValue
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A062C"));
+            }
+        }
+
+        public List<FloatingPointDouble> ToleranceValue_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A062C").ToList();
+            }
+        }
+
+        public Sequence PatientSupportPositionToleranceSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A062D"));
+            }
+        }
+
+        public List<Sequence> PatientSupportPositionToleranceSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A062D").ToList();
+            }
+        }
+
+        public FloatingPointDouble TreatmentTimeLimit
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A062E"));
+            }
+        }
+
+        public List<FloatingPointDouble> TreatmentTimeLimit_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A062E").ToList();
+            }
+        }
+
+        public Sequence CArmPhotonElectronControlPointSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A062F"));
+            }
+        }
+
+        public List<Sequence> CArmPhotonElectronControlPointSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A062F").ToList();
+            }
+        }
+
+        public Sequence ReferencedRTRadiationSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0630"));
+            }
+        }
+
+        public List<Sequence> ReferencedRTRadiationSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0630").ToList();
+            }
+        }
+
+        public Sequence ReferencedRTInstanceSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0631"));
+            }
+        }
+
+        public List<Sequence> ReferencedRTInstanceSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0631").ToList();
+            }
+        }
+
+        public Sequence ReferencedRTPatientSetupSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0632"));
+            }
+        }
+
+        public List<Sequence> ReferencedRTPatientSetupSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0632").ToList();
+            }
+        }
+
+        public FloatingPointDouble SourceToPatientSurfaceDistance
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0634"));
+            }
+        }
+
+        public List<FloatingPointDouble> SourceToPatientSurfaceDistance_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0634").ToList();
+            }
+        }
+
+        public Sequence TreatmentMachineSpecialModeCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0635"));
+            }
+        }
+
+        public List<Sequence> TreatmentMachineSpecialModeCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0635").ToList();
+            }
+        }
+
+        public UnsignedShort IntendedNumberOfFractions
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0636"));
+            }
+        }
+
+        public List<UnsignedShort> IntendedNumberOfFractions_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0636").ToList();
+            }
+        }
+
+        public CodeString RTRadiationSetIntent
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A0637"));
+            }
+        }
+
+        public List<CodeString> RTRadiationSetIntent_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A0637").ToList();
+            }
+        }
+
+        public CodeString RTRadiationPhysicalAndGeometricContentDetailFlag
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A0638"));
+            }
+        }
+
+        public List<CodeString> RTRadiationPhysicalAndGeometricContentDetailFlag_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A0638").ToList();
+            }
+        }
+
+        public CodeString RTRecordFlag
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A0639"));
+            }
+        }
+
+        public List<CodeString> RTRecordFlag_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A0639").ToList();
+            }
+        }
+
+        public Sequence TreatmentDeviceIdentificationSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A063A"));
+            }
+        }
+
+        public List<Sequence> TreatmentDeviceIdentificationSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A063A").ToList();
+            }
+        }
+
+        public Sequence ReferencedRTPhysicianIntentSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A063B"));
+            }
+        }
+
+        public List<Sequence> ReferencedRTPhysicianIntentSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A063B").ToList();
+            }
+        }
+
+        public FloatingPointDouble CumulativeMeterset
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A063C"));
+            }
+        }
+
+        public List<FloatingPointDouble> CumulativeMeterset_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A063C").ToList();
+            }
+        }
+
+        public FloatingPointDouble DeliveryRate
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A063D"));
+            }
+        }
+
+        public List<FloatingPointDouble> DeliveryRate_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A063D").ToList();
+            }
+        }
+
+        public Sequence DeliveryRateUnitSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A063E"));
+            }
+        }
+
+        public List<Sequence> DeliveryRateUnitSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A063E").ToList();
+            }
+        }
+
+        public Sequence TreatmentPositionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A063F"));
+            }
+        }
+
+        public List<Sequence> TreatmentPositionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A063F").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationSourceAxisDistance
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0640"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationSourceAxisDistance_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0640").ToList();
+            }
+        }
+
+        public UnsignedShort NumberOfRTBeamLimitingDevices
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0641"));
+            }
+        }
+
+        public List<UnsignedShort> NumberOfRTBeamLimitingDevices_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0641").ToList();
+            }
+        }
+
+        public FloatingPointDouble RTBeamLimitingDeviceProximalDistance
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0642"));
+            }
+        }
+
+        public List<FloatingPointDouble> RTBeamLimitingDeviceProximalDistance_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0642").ToList();
+            }
+        }
+
+        public FloatingPointDouble RTBeamLimitingDeviceDistalDistance
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0643"));
+            }
+        }
+
+        public List<FloatingPointDouble> RTBeamLimitingDeviceDistalDistance_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0643").ToList();
+            }
+        }
+
+        public Sequence ParallelRTBeamDelimiterDeviceOrientationLabelCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0644"));
+            }
+        }
+
+        public List<Sequence> ParallelRTBeamDelimiterDeviceOrientationLabelCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0644").ToList();
+            }
+        }
+
+        public FloatingPointDouble BeamModifierOrientationAngle
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0645"));
+            }
+        }
+
+        public List<FloatingPointDouble> BeamModifierOrientationAngle_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0645").ToList();
+            }
+        }
+
+        public Sequence FixedRTBeamDelimiterDeviceSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0646"));
+            }
+        }
+
+        public List<Sequence> FixedRTBeamDelimiterDeviceSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0646").ToList();
+            }
+        }
+
+        public Sequence ParallelRTBeamDelimiterDeviceSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0647"));
+            }
+        }
+
+        public List<Sequence> ParallelRTBeamDelimiterDeviceSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0647").ToList();
+            }
+        }
+
+        public UnsignedShort NumberOfParallelRTBeamDelimiters
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0648"));
+            }
+        }
+
+        public List<UnsignedShort> NumberOfParallelRTBeamDelimiters_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0648").ToList();
+            }
+        }
+
+        public FloatingPointDouble ParallelRTBeamDelimiterBoundaries
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0649"));
+            }
+        }
+
+        public List<FloatingPointDouble> ParallelRTBeamDelimiterBoundaries_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0649").ToList();
+            }
+        }
+
+        public FloatingPointDouble ParallelRTBeamDelimiterPositions
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A064A"));
+            }
+        }
+
+        public List<FloatingPointDouble> ParallelRTBeamDelimiterPositions_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A064A").ToList();
+            }
+        }
+
+        public FloatingPointDouble RTBeamLimitingDeviceOffset
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A064B"));
+            }
+        }
+
+        public List<FloatingPointDouble> RTBeamLimitingDeviceOffset_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A064B").ToList();
+            }
+        }
+
+        public Sequence RTBeamDelimiterGeometrySequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A064C"));
+            }
+        }
+
+        public List<Sequence> RTBeamDelimiterGeometrySequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A064C").ToList();
+            }
+        }
+
+        public Sequence RTBeamLimitingDeviceDefinitionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A064D"));
+            }
+        }
+
+        public List<Sequence> RTBeamLimitingDeviceDefinitionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A064D").ToList();
+            }
+        }
+
+        public CodeString ParallelRTBeamDelimiterOpeningMode
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A064E"));
+            }
+        }
+
+        public List<CodeString> ParallelRTBeamDelimiterOpeningMode_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A064E").ToList();
+            }
+        }
+
+        public CodeString ParallelRTBeamDelimiterLeafMountingSide
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A064F"));
+            }
+        }
+
+        public List<CodeString> ParallelRTBeamDelimiterLeafMountingSide_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A064F").ToList();
+            }
+        }
+
+        public UniqueIdentifier PatientSetupUID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("300A0650"));
+            }
+        }
+
+        public List<UniqueIdentifier> PatientSetupUID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("300A0650").ToList();
+            }
+        }
+
+        public Sequence WedgeDefinitionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0651"));
+            }
+        }
+
+        public List<Sequence> WedgeDefinitionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0651").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationBeamWedgeAngle
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0652"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationBeamWedgeAngle_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0652").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationBeamWedgeThinEdgeDistance
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0653"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationBeamWedgeThinEdgeDistance_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0653").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationBeamEffectiveWedgeAngle
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0654"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationBeamEffectiveWedgeAngle_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0654").ToList();
+            }
+        }
+
+        public UnsignedShort NumberOfWedgePositions
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0655"));
+            }
+        }
+
+        public List<UnsignedShort> NumberOfWedgePositions_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0655").ToList();
+            }
+        }
+
+        public Sequence RTBeamLimitingDeviceOpeningSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0656"));
+            }
+        }
+
+        public List<Sequence> RTBeamLimitingDeviceOpeningSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0656").ToList();
+            }
+        }
+
+        public UnsignedShort NumberOfRTBeamLimitingDeviceOpenings
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0657"));
+            }
+        }
+
+        public List<UnsignedShort> NumberOfRTBeamLimitingDeviceOpenings_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0657").ToList();
+            }
+        }
+
+        public Sequence RadiationDosimeterUnitSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0658"));
+            }
+        }
+
+        public List<Sequence> RadiationDosimeterUnitSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0658").ToList();
+            }
+        }
+
+        public Sequence RTDeviceDistanceReferenceLocationCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0659"));
+            }
+        }
+
+        public List<Sequence> RTDeviceDistanceReferenceLocationCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0659").ToList();
+            }
+        }
+
+        public Sequence RadiationDeviceConfigurationAndCommissioningKeySequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A065A"));
+            }
+        }
+
+        public List<Sequence> RadiationDeviceConfigurationAndCommissioningKeySequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A065A").ToList();
+            }
+        }
+
+        public Sequence PatientSupportPositionParameterSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A065B"));
+            }
+        }
+
+        public List<Sequence> PatientSupportPositionParameterSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A065B").ToList();
+            }
+        }
+
+        public CodeString PatientSupportPositionSpecificationMethod
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A065C"));
+            }
+        }
+
+        public List<CodeString> PatientSupportPositionSpecificationMethod_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A065C").ToList();
+            }
+        }
+
+        public Sequence PatientSupportPositionDeviceParameterSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A065D"));
+            }
+        }
+
+        public List<Sequence> PatientSupportPositionDeviceParameterSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A065D").ToList();
+            }
+        }
+
+        public UnsignedShort DeviceOrderIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A065E"));
+            }
+        }
+
+        public List<UnsignedShort> DeviceOrderIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A065E").ToList();
+            }
+        }
+
+        public UnsignedShort PatientSupportPositionParameterOrderIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A065F"));
+            }
+        }
+
+        public List<UnsignedShort> PatientSupportPositionParameterOrderIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A065F").ToList();
+            }
+        }
+
+        public Sequence PatientSupportPositionDeviceToleranceSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0660"));
+            }
+        }
+
+        public List<Sequence> PatientSupportPositionDeviceToleranceSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0660").ToList();
+            }
+        }
+
+        public UnsignedShort PatientSupportPositionToleranceOrderIndex
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0661"));
+            }
+        }
+
+        public List<UnsignedShort> PatientSupportPositionToleranceOrderIndex_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0661").ToList();
+            }
+        }
+
+        public Sequence CompensatorDefinitionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0662"));
+            }
+        }
+
+        public List<Sequence> CompensatorDefinitionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0662").ToList();
+            }
+        }
+
+        public CodeString CompensatorMapOrientation
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A0663"));
+            }
+        }
+
+        public List<CodeString> CompensatorMapOrientation_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A0663").ToList();
+            }
+        }
+
+        public OtherFloatString CompensatorProximalThicknessMap
+        {
+            get
+            {
+                return (OtherFloatString)(Items.FindFirst<OtherFloatString>("300A0664"));
+            }
+        }
+
+        public List<OtherFloatString> CompensatorProximalThicknessMap_
+        {
+            get
+            {
+                return Items.FindAll<OtherFloatString>("300A0664").ToList();
+            }
+        }
+
+        public OtherFloatString CompensatorDistalThicknessMap
+        {
+            get
+            {
+                return (OtherFloatString)(Items.FindFirst<OtherFloatString>("300A0665"));
+            }
+        }
+
+        public List<OtherFloatString> CompensatorDistalThicknessMap_
+        {
+            get
+            {
+                return Items.FindAll<OtherFloatString>("300A0665").ToList();
+            }
+        }
+
+        public FloatingPointDouble CompensatorBasePlaneOffset
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0666"));
+            }
+        }
+
+        public List<FloatingPointDouble> CompensatorBasePlaneOffset_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0666").ToList();
+            }
+        }
+
+        public Sequence CompensatorShapeFabricationCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0667"));
+            }
+        }
+
+        public List<Sequence> CompensatorShapeFabricationCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0667").ToList();
+            }
+        }
+
+        public Sequence CompensatorShapeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0668"));
+            }
+        }
+
+        public List<Sequence> CompensatorShapeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0668").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationBeamCompensatorMillingToolDiameter
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0669"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationBeamCompensatorMillingToolDiameter_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0669").ToList();
+            }
+        }
+
+        public Sequence BlockDefinitionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A066A"));
+            }
+        }
+
+        public List<Sequence> BlockDefinitionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A066A").ToList();
+            }
+        }
+
+        public OtherFloatString BlockEdgeData
+        {
+            get
+            {
+                return (OtherFloatString)(Items.FindFirst<OtherFloatString>("300A066B"));
+            }
+        }
+
+        public List<OtherFloatString> BlockEdgeData_
+        {
+            get
+            {
+                return Items.FindAll<OtherFloatString>("300A066B").ToList();
+            }
+        }
+
+        public CodeString BlockOrientation
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A066C"));
+            }
+        }
+
+        public List<CodeString> BlockOrientation_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A066C").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationBeamBlockThickness
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A066D"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationBeamBlockThickness_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A066D").ToList();
+            }
+        }
+
+        public FloatingPointDouble RadiationBeamBlockSlabThickness
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A066E"));
+            }
+        }
+
+        public List<FloatingPointDouble> RadiationBeamBlockSlabThickness_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A066E").ToList();
+            }
+        }
+
+        public Sequence BlockEdgeDataSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A066F"));
+            }
+        }
+
+        public List<Sequence> BlockEdgeDataSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A066F").ToList();
+            }
+        }
+
+        public UnsignedShort NumberOfRTAccessoryHolders
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0670"));
+            }
+        }
+
+        public List<UnsignedShort> NumberOfRTAccessoryHolders_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0670").ToList();
+            }
+        }
+
+        public Sequence GeneralAccessoryDefinitionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0671"));
+            }
+        }
+
+        public List<Sequence> GeneralAccessoryDefinitionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0671").ToList();
+            }
+        }
+
+        public UnsignedShort NumberOfGeneralAccessories
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0672"));
+            }
+        }
+
+        public List<UnsignedShort> NumberOfGeneralAccessories_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0672").ToList();
+            }
+        }
+
+        public Sequence BolusDefinitionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0673"));
+            }
+        }
+
+        public List<Sequence> BolusDefinitionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0673").ToList();
+            }
+        }
+
+        public UnsignedShort NumberOfBoluses
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0674"));
+            }
+        }
+
+        public List<UnsignedShort> NumberOfBoluses_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0674").ToList();
+            }
+        }
+
+        public UniqueIdentifier EquipmentFrameOfReferenceUID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("300A0675"));
+            }
+        }
+
+        public List<UniqueIdentifier> EquipmentFrameOfReferenceUID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("300A0675").ToList();
+            }
+        }
+
+        public ShortText EquipmentFrameOfReferenceDescription
+        {
+            get
+            {
+                return (ShortText)(Items.FindFirst<ShortText>("300A0676"));
+            }
+        }
+
+        public List<ShortText> EquipmentFrameOfReferenceDescription_
+        {
+            get
+            {
+                return Items.FindAll<ShortText>("300A0676").ToList();
+            }
+        }
+
+        public Sequence EquipmentReferencePointCoordinatesSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0677"));
+            }
+        }
+
+        public List<Sequence> EquipmentReferencePointCoordinatesSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0677").ToList();
+            }
+        }
+
+        public Sequence EquipmentReferencePointCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0678"));
+            }
+        }
+
+        public List<Sequence> EquipmentReferencePointCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0678").ToList();
+            }
+        }
+
+        public FloatingPointDouble RTBeamLimitingDeviceAngle
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0679"));
+            }
+        }
+
+        public List<FloatingPointDouble> RTBeamLimitingDeviceAngle_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0679").ToList();
+            }
+        }
+
+        public FloatingPointDouble SourceRollAngle
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A067A"));
+            }
+        }
+
+        public List<FloatingPointDouble> SourceRollAngle_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A067A").ToList();
+            }
+        }
+
+        public Sequence RadiationGenerationModeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A067B"));
+            }
+        }
+
+        public List<Sequence> RadiationGenerationModeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A067B").ToList();
+            }
+        }
+
+        public ShortString RadiationGenerationModeLabel
+        {
+            get
+            {
+                return (ShortString)(Items.FindFirst<ShortString>("300A067C"));
+            }
+        }
+
+        public List<ShortString> RadiationGenerationModeLabel_
+        {
+            get
+            {
+                return Items.FindAll<ShortString>("300A067C").ToList();
+            }
+        }
+
+        public ShortText RadiationGenerationModeDescription
+        {
+            get
+            {
+                return (ShortText)(Items.FindFirst<ShortText>("300A067D"));
+            }
+        }
+
+        public List<ShortText> RadiationGenerationModeDescription_
+        {
+            get
+            {
+                return Items.FindAll<ShortText>("300A067D").ToList();
+            }
+        }
+
+        public Sequence RadiationGenerationModeMachineCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A067E"));
+            }
+        }
+
+        public List<Sequence> RadiationGenerationModeMachineCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A067E").ToList();
+            }
+        }
+
+        public Sequence RadiationTypeCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A067F"));
+            }
+        }
+
+        public List<Sequence> RadiationTypeCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A067F").ToList();
+            }
+        }
+
+        public DecimalString NominalEnergy
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("300A0680"));
+            }
+        }
+
+        public List<DecimalString> NominalEnergy_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("300A0680").ToList();
+            }
+        }
+
+        public DecimalString MinimumNominalEnergy
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("300A0681"));
+            }
+        }
+
+        public List<DecimalString> MinimumNominalEnergy_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("300A0681").ToList();
+            }
+        }
+
+        public DecimalString MaximumNominalEnergy
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("300A0682"));
+            }
+        }
+
+        public List<DecimalString> MaximumNominalEnergy_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("300A0682").ToList();
+            }
+        }
+
+        public Sequence RadiationFluenceModifierCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0683"));
+            }
+        }
+
+        public List<Sequence> RadiationFluenceModifierCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0683").ToList();
+            }
+        }
+
+        public Sequence EnergyUnitCodeSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0684"));
+            }
+        }
+
+        public List<Sequence> EnergyUnitCodeSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0684").ToList();
+            }
+        }
+
+        public UnsignedShort NumberOfRadiationGenerationModes
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0685"));
+            }
+        }
+
+        public List<UnsignedShort> NumberOfRadiationGenerationModes_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0685").ToList();
+            }
+        }
+
+        public Sequence PatientSupportDevicesSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0686"));
+            }
+        }
+
+        public List<Sequence> PatientSupportDevicesSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0686").ToList();
+            }
+        }
+
+        public UnsignedShort NumberOfPatientSupportDevices
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("300A0687"));
+            }
+        }
+
+        public List<UnsignedShort> NumberOfPatientSupportDevices_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("300A0687").ToList();
+            }
+        }
+
+        public FloatingPointDouble RTBeamModifierDefinitionDistance
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("300A0688"));
+            }
+        }
+
+        public List<FloatingPointDouble> RTBeamModifierDefinitionDistance_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("300A0688").ToList();
+            }
+        }
+
+        public Sequence BeamAreaLimitSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A0689"));
+            }
+        }
+
+        public List<Sequence> BeamAreaLimitSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A0689").ToList();
+            }
+        }
+
+        public Sequence ReferencedRTPrescriptionSequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("300A068A"));
+            }
+        }
+
+        public List<Sequence> ReferencedRTPrescriptionSequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("300A068A").ToList();
+            }
+        }
+
         public Sequence ReferencedRTPlanSequence
         {
             get
@@ -66043,7 +70827,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public LongString EffectiveDoseMethodDescription
+        public LongString EffectiveDoseCalculationMethodDescription
         {
             get
             {
@@ -66051,7 +70835,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public List<LongString> EffectiveDoseMethodDescription_
+        public List<LongString> EffectiveDoseCalculationMethodDescription_
         {
             get
             {
@@ -66379,7 +71163,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public LongString ManufacturersModelVersion
+        public LongString ManufacturerModelVersion
         {
             get
             {
@@ -66387,7 +71171,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public List<LongString> ManufacturersModelVersion_
+        public List<LongString> ManufacturerModelVersion_
         {
             get
             {
@@ -71224,6 +76008,38 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<LongText>("60xx4000").ToList();
+            }
+        }
+
+        public Other64BitVeryLong ExtendedOffsetTable
+        {
+            get
+            {
+                return (Other64BitVeryLong)(Items.FindFirst<Other64BitVeryLong>("7FE00001"));
+            }
+        }
+
+        public List<Other64BitVeryLong> ExtendedOffsetTable_
+        {
+            get
+            {
+                return Items.FindAll<Other64BitVeryLong>("7FE00001").ToList();
+            }
+        }
+
+        public Other64BitVeryLong ExtendedOffsetTableLengths
+        {
+            get
+            {
+                return (Other64BitVeryLong)(Items.FindFirst<Other64BitVeryLong>("7FE00002"));
+            }
+        }
+
+        public List<Other64BitVeryLong> ExtendedOffsetTableLengths_
+        {
+            get
+            {
+                return Items.FindAll<Other64BitVeryLong>("7FE00002").ToList();
             }
         }
 

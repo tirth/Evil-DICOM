@@ -7,6 +7,8 @@ namespace EvilDICOM.CodeGeneratorTests
 {
     public class MainTest
     {
+        private const string OutputDir = @"C:\Users\Tirth\Downloads\dicom_nema\EvilOutput";
+
         private readonly ITestOutputHelper _output;
 
         public MainTest(ITestOutputHelper output)
@@ -29,25 +31,25 @@ namespace EvilDICOM.CodeGeneratorTests
         [Fact]
         public void TestSopClassBuilder()
         {
-            SopClassUidBuilder.BuildSopClassUids();
+            SopClassUidBuilder.BuildSopClassUids(OutputDir);
         }
 
         [Fact]
         public void TestSopEnumBuilder()
         {
-            SopClassUidBuilder.BuildSopClassEnum();
+            SopClassUidBuilder.BuildSopClassEnum(OutputDir);
         }
 
         [Fact]
-        public void TestSopClassDictionary()
+        public void TestSopClassDictionaryBuilder()
         {
-            SopClassUidBuilder.BuildSopClassDictionary();
+            SopClassUidBuilder.BuildSopClassDictionary(OutputDir);
         }
 
         [Fact]
         public void TestElementBuilder()
         {
-            CodeGen.GenerateStuff();
+            CodeGen.GenerateStuff(OutputDir);
         }
 
         [Fact]

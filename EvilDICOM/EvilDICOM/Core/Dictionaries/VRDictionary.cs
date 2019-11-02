@@ -89,7 +89,7 @@ namespace EvilDICOM.Core.Dictionaries
                     return VR.Unknown;
 
                 case "OV":
-                    return VR.Other64BitVeryLongString;
+                    return VR.Other64BitVeryLong;
                 case "SV":
                     return VR.Signed64BitVeryLong;
                 case "UV":
@@ -172,7 +172,7 @@ namespace EvilDICOM.Core.Dictionaries
                 case VR.Unknown:
                     return "UN";
 
-                case VR.Other64BitVeryLongString:
+                case VR.Other64BitVeryLong:
                     return "OV";
                 case VR.Signed64BitVeryLong:
                     return "SV";
@@ -241,7 +241,7 @@ namespace EvilDICOM.Core.Dictionaries
                 case VR.OtherByteString:
                 case VR.OtherDoubleString:
                 case VR.OtherLongString:
-                case VR.Other64BitVeryLongString:
+                case VR.Other64BitVeryLong:
                 case VR.OtherWordString:
                 case VR.Signed64BitVeryLong:
                 case VR.Unsigned64BitVeryLong:

@@ -106,7 +106,7 @@ namespace EvilDICOM.Core.Element
                     return new OtherDoubleString(tag, data as byte[]);
                 case VR.OtherLongString:
                     return new OtherLongString(tag, data as byte[]);
-                case VR.Other64BitVeryLongString:
+                case VR.Other64BitVeryLong:
                     return new Other64BitVeryLong(tag, data as byte[]);
                 default:
                     var unk = new Unknown(tag, data as byte[]);

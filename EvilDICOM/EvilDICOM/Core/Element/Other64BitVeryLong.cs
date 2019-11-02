@@ -7,13 +7,13 @@ namespace EvilDICOM.Core.Element
     {
         public Other64BitVeryLong()
         {
-            VR = VR.Other64BitVeryLongString;
+            VR = VR.Other64BitVeryLong;
         }
 
         public Other64BitVeryLong(Tag tag, byte[] data)
             : base(tag, data)
         {
-            VR = VR.Other64BitVeryLongString;
+            VR = VR.Other64BitVeryLong;
         }
     }
 }

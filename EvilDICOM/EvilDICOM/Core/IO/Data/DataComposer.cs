@@ -34,7 +34,7 @@ namespace EvilDICOM.Core.IO.Data
                 case VR.OtherWordString:
                     var ows = el as OtherWordString;
                     return ows.DataContainer.MultipicityValue.ToArray();
-                case VR.Other64BitVeryLongString:
+                case VR.Other64BitVeryLong:
                     var ovs = el as Other64BitVeryLong;
                     return ovs.DataContainer.MultipicityValue.ToArray();
                 case VR.SignedLong:
@@ -89,7 +89,7 @@ namespace EvilDICOM.Core.IO.Data
                 case VR.OtherLongString:
                     var ols = el as OtherLongString;
                     return ols.DataContainer.MultipicityValue.ToArray();
-                case VR.Other64BitVeryLongString:
+                case VR.Other64BitVeryLong:
                     var ovs = el as Other64BitVeryLong;
                     return ovs.DataContainer.MultipicityValue.ToArray();
                 case VR.OtherWordString:
