@@ -16,8 +16,4 @@
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0-preview2.19523.17" />
-  </ItemGroup>
-
 </Project>
