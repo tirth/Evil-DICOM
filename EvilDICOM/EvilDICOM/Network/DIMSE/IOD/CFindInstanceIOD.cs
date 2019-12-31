@@ -32,8 +32,8 @@ namespace EvilDICOM.Network.DIMSE.IOD
 
         public string SOPInstanceUID
         {
-            get { return _sel.SOP​Instance​UID != null ? _sel.SOP​Instance​UID.Data : null; }
-            set { _sel.Forge(DF.SOP​Instance​UID(value)); }
+            get { return _sel.SOPInstanceUID != null ? _sel.SOPInstanceUID.Data : null; }
+            set { _sel.Forge(DF.SOPInstanceUID(value)); }
         }
     }
 }

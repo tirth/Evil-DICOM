@@ -27,11 +27,11 @@ namespace EvilDICOM.Network.DIMSE.IOD
         {
             get
             {
-                if (_sel.Query​Retrieve​Level == null)
-                    _sel.Query​Retrieve​Level.Data = QueryLevel.STUDY.ToString();
-                return (QueryLevel)S.Enum.Parse(typeof(QueryLevel), _sel.Query​Retrieve​Level.Data);
+                if (_sel.QueryRetrieveLevel == null)
+                    _sel.QueryRetrieveLevel.Data = QueryLevel.STUDY.ToString();
+                return (QueryLevel)S.Enum.Parse(typeof(QueryLevel), _sel.QueryRetrieveLevel.Data);
             }
-            set { _sel.Forge(DF.Query​Retrieve​Level(value.ToString())); }
+            set { _sel.Forge(DF.QueryRetrieveLevel(value.ToString())); }
         }
 
         public void CombineQuery(CFindRequestIOD cfRequestIod)

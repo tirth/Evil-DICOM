@@ -28,14 +28,14 @@ namespace EvilDICOM.Network.DIMSE.IOD
 
         public PersonName PatientsName
         {
-            get { return _sel.Patient​Name != null ? _sel.Patient​Name : null; }
-            set { _sel.Patient​Name = value; }
+            get { return _sel.PatientName != null ? _sel.PatientName : null; }
+            set { _sel.PatientName = value; }
         }
 
         public string PatientId
         {
-            get { return _sel.Patient​ID != null ? _sel.Patient​ID.Data : null; }
-            set { _sel.Forge(DF.Patient​ID(value)); }
+            get { return _sel.PatientID != null ? _sel.PatientID.Data : null; }
+            set { _sel.Forge(DF.PatientID(value)); }
         }
 
         public string PatientSex

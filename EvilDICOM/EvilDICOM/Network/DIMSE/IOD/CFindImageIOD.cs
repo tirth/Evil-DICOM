@@ -53,10 +53,10 @@ namespace EvilDICOM.Network.DIMSE.IOD
             set { _sel.Forge(DF.AcquisitionTime(value)); }
         }
 
-        public S.DateTime? Content​Date
+        public S.DateTime? ContentDate
         {
-            get { return _sel.Content​Date != null ? _sel.Content​Date.Data : null; }
-            set { _sel.Forge(DF.Content​Date(value)); }
+            get { return _sel.ContentDate != null ? _sel.ContentDate.Data : null; }
+            set { _sel.Forge(DF.ContentDate(value)); }
         }
 
         public S.DateTime? ContentTime
