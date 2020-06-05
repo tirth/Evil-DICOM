@@ -10,14 +10,7 @@
     <Product>Evil DICOM</Product>
     <Description>The wickedest C# DICOM libary in the world.</Description>
     <Copyright>Rex Cardan, Ph.D.</Copyright>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0-preview2.19523.17" />
-  </ItemGroup>
 
 </Project>

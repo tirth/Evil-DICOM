@@ -90,7 +90,8 @@ namespace EvilDICOM.Core.IO.Reading
             var syntax = trySyntax;
 
             using (var dr = new DICOMBinaryReader(filePath))
-                return ReadReader(dr, syntax, enc, includeMeta);
+                foreach (var el in ReadReader(dr, syntax, enc, includeMeta))
+                    yield return el;
         }
 
         public static IEnumerable<IDICOMElement> ReadEnum(byte[] fileBytes,
@@ -101,7 +102,8 @@ namespace EvilDICOM.Core.IO.Reading
             var syntax = trySyntax;
 
             using (var dr = new DICOMBinaryReader(fileBytes))
-                return ReadReader(dr, syntax, enc, includeMeta);
+                foreach (var el in ReadReader(dr, syntax, enc, includeMeta))
+                    yield return el;
         }
 
         private static IEnumerable<IDICOMElement> ReadReader(DICOMBinaryReader dr, TransferSyntax syntax, StringEncoding enc, bool includeMeta)

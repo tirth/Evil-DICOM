@@ -41,7 +41,8 @@ namespace EvilDICOM.Core.IO.Writing
             return new DICOMIOSettings
             {
                 TransferSyntax = TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN,
-                DoWriteIndefiniteSequences = DoWriteIndefiniteSequences
+                DoWriteIndefiniteSequences = DoWriteIndefiniteSequences,
+                StringEncoding = StringEncoding.ISO_IR_192
             };
         }
     }
