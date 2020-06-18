@@ -1,5 +1,6 @@
 ﻿namespace EvilDICOM.Core.Helpers
 {
+    // TODO: support prefix, suffix
     public class PersonNameHelper
     {
         public static string GetFirstName(string data)
@@ -36,6 +37,12 @@
             var nameParts = Parse(data);
             nameParts[2] = name;
             return FormatName(nameParts[0], nameParts[1], nameParts[2]);
+        }
+
+        public static (string firstName, string middleName, string lastName) ParseName(string unparsedName)
+        {
+            var parsed = Parse(unparsedName);
+            return (parsed[0], parsed[1], parsed[2]);
         }
 
         private static string[] Parse(string unparsedName)
